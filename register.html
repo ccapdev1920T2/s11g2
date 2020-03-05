@@ -1,0 +1,207 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src = "https://code.jquery.com/jquery-3.4.1.min.js" type = "text/javascript">
+      /* INSERT CODE HERE */
+    </script>
+    <style>
+      .spacer {
+        height: 100px;
+      }
+        
+        body {
+            background-image: url("https://ccsanangelo.org/wp-content/uploads/2016/12/simple-background-color-has-web-page-background-color.jpg");
+        }
+        
+        table {
+            background-color: white;
+        }
+    </style>
+    
+</head>
+
+<body class = "p-3 mb-2 bg-light text-dark">
+    <header>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#">Virtus et Scientia</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="user.html">User Profile</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="search_car.html">Find your Car</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="build.html">Build</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+              <li class = "nav-item active">
+                <a class = "nav-link"> Register
+                  <span class = "sr-only"> (current) </span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+    <div class = "spacer"></div>
+
+    <div class = "container">
+      <table class = "table table-striped table-bordered table-hover table-sm">
+          <tr>
+              <td>First Name: </td>
+              <td><input type="text", id="fname", name="fname"></td>
+          </tr>
+          <tr>
+              <td>Last Name: </td>
+              <td><input type="text", id="lname", name="lname"></td>
+          </tr>
+          <tr>
+              <td>Username: </td>
+              <td><input type="text", id="username", name="username"></td>
+          </tr>
+          <tr>
+              <td>Password: </td>
+              <td><input type="password", id="password", name="password"></td>
+          </tr>
+          <tr>
+            <td>Confirm Password: </td>
+            <td><input type = "password", id = "confirmPassword", name = "confirmPassword"></td>
+          </tr>
+          <tr>
+              <td>Email: </td>
+              <td><input type="email", id="email", name="email"></td>
+          </tr>
+          <tr>
+              <td>Birthday: </td>
+              <td><input type="date", id="bday", name="bday"></td>
+          </tr>
+          <tr>
+              <td>Credit Card Numbers: </td>
+              <td><input size="4", maxlength="4", type="text", id="numbers1", name="numbers1">-
+              <input size="4", maxlength="4", type="text", id="numbers2", name="numbers2">-
+              <input size="4", maxlength="4", type="text", id="numbers3", name="numbers3">-
+              <input size="4", maxlength="4", type="text", id="numbers4", name="numbers4"></td>
+          </tr>
+          <tr>
+              <td>Credit Card Expiration: </td>
+              <td><input size="4", maxlength="5", type="text", id="expiration", name="expiration"></td>
+          </tr>
+          <tr>
+              <td>Credit Card PIN: </td>
+              <td><input size="4", maxlength="3", type="text", id="pin", name="pin"></td>
+          </tr>
+          <tr>
+              <td>Driver's License: </td>
+              <td><input type="file", accept="image/*", id="license", name="license"></td>
+          </tr>
+          <tr>
+              <td><button id="submit" class = "btn btn-primary">Submit</button></td>
+          </tr>
+      </table>
+
+      <p id = "warning"></p>
+
+    </div>
+
+    <script type = "text/javascript">
+      function checkField(field, bool) {
+        var valid = bool;
+
+        if(field.val() == '') {
+          valid = false;
+          field.css('border-color', 'red');
+          $("#warning").text('Please enter the required field/s.');
+        }
+        else {
+          field.css('border-color', 'white');
+        }
+
+        return valid;
+      }
+
+      function checkEmail(field, bool) {
+        var valid = bool;
+        var atIndex = field.val().indexOf('@');
+        var dotIndex = field.val().lastIndexOf('.');
+
+        if(atIndex == -1 || dotIndex == -1 || atIndex > dotIndex) {
+          valid = false;
+          field.css('border-color', 'red');
+          $("#warning").text('Please input a valid E-mail address.');
+        }
+        else {
+          field.css('border-color', 'white');
+        }
+
+        return valid;
+      }
+
+      function checkPassword(field1, field2, bool) {
+        var valid = bool;
+
+        if(field1.val() == '' || field2.val() == '' || field1.val() != field2.val()) {
+          valid = false;
+          field1.css('border-color', 'red');
+          field2.css('border-color', 'red');
+          $("#warning").text('Please re-input the password and confirm password.');
+        }
+        else {
+          field1.css('border-color', 'white');
+          field2.css('border-color', 'white');
+        }
+
+        return valid;
+      }
+
+      function checkFile(field, bool) {
+        var valid = bool;
+
+        if(field.get(0).files.length == 0) {
+          valid = false;
+          $("#warning").text('Please send a copy of your license.');
+        }
+
+        return valid;
+      }
+
+      $("#submit").click(function() {
+        var valid = true;
+        valid = checkFile($("#license"), valid);
+        valid = checkField($("#fname"), valid);
+        valid = checkField($("#lname"), valid);
+        valid = checkField($("#username"), valid);
+        valid = checkEmail($("#email"), valid);
+        valid = checkField($("#bday"), valid);
+        valid = checkPassword($("#password"), $("#confirmPassword"), valid);
+        valid = checkField($("#numbers1"), valid);
+        valid = checkField($("#numbers2"), valid);
+        valid = checkField($("#numbers3"), valid);
+        valid = checkField($("#numbers4"), valid);
+        valid = checkField($("#expiration"), valid);
+        valid = checkField($("#pin"), valid);
+
+        if(valid == true) {
+          $("#warning").text('');
+          window.location.href = "user.html";
+        }
+
+      });
+    </script>
+
+  </body>
+</html>
