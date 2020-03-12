@@ -1,14 +1,15 @@
+<!DOCTYPE HTML>
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-      /* INSERT CODE HERE */
-    </script>
-    
-    <script src= "https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript">
-    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     <script type="text/javascript">
+
       class Car {
         constructor(vehicleName, vehicleBrand, vehicleClass, vehicleType, bodyStyle, capacity, price) {
           this.vehicleName = vehicleName;
@@ -161,7 +162,6 @@
 
 
         */
-
         /* BY THE WAY GUYS!! 
 
         IDing of price range starts at 2.. so if its within 0-999 price range it is 
@@ -169,9 +169,6 @@
         '2' not '1', and then the next price range is 3.. etc 
 
         */
-      
-
-
         $(document).ready(function(){
           $("#filterPrice").change(function(){
             if($("#filterPrice").val() == "1"){
@@ -252,164 +249,47 @@
           })
 
         })
-
     </script>
+    
     <style>
-      .spacer{
-        height:75px;
+
+      .jumbotron{
+        background-color: #01579B;
+        color: white;
+        height: 40px;
       }
 
-      h1{
-        font-size: 40px;
-        font-family: sans-serif;
+      .car-content{
+        background-color: #DEE2D9;
       }
-
+      .bar-content{
+        background-color: #0277BD;
+        color: white;
+      }
       body{
-              /* The image used */
-      background-image: url("https://ccsanangelo.org/wp-content/uploads/2016/12/simple-background-color-has-web-page-background-color.jpg");
-
-      /* Full height */
-      height: 100%;
-
-      /* Text Color */
-      /*color: white; */
-      /* Create the parallax scrolling effect */
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+        background-color:#DDDDDD;
       }
 
-      #searchArea {
-        text-align: center;
-        margin: auto;
-        background-color: white;
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-        border: 2px solid transparent;
-        width: 90%;
-      }
+      /*
 
-      #carListContainer{
-        margin: auto;
-        background-color: transparent;
-        width: 90%;
-      }
+      BUTTON:
 
-      .capsule{
-        border: 2px solid transparent;
-        height: 500px;
-        width: 100%;
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-        background-color: transparent;
-      }
+      https://www.freeiconspng.com/uploads/arrow-down-icon-png-3.png
 
-      /* under CAPSULE */
+      border outlines:
 
-      .capsuleLeft{
-        position: absolute;
-        width:300px;
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-      }
-      /* under capsuleLeft */
-      .carPic{
-        padding: 5px;
-        float:left;
-        height: 250px;
-        width: 300px;
-      }
-
-      /* under capsuleLeft */
-      .carImg{
-        width:100%;
-        height:100%;
-        border-radius: 4px;
-      }
-
-      .carAtt{
-        float:left;
-        padding-left: 3px;
-        width: 300px;
-        height: 245px;
-      }
-
-
-      .att{
-        font-family: sans-serif;
-        font-weight: bold;
-        font-size: 20px;
-        margin-bottom: 0em;
-      }
-
-
-      /* under capsule */
-      .capsuleRight{
-        position: absolute;
-        left: 390px;
-        padding-left:1px solid white;
-        width: 1000px;
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-      }
-
-      /* under capsuleRight */
-      .capsuleRight p{
-        font-size: 18px;
-      }
-
-      /* clases for cars */
-      .SUV{
-        border: 2px solid transparent;
-        margin-bottom: 10px;
-        margin-top:10px;
-        background-color: white;
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-      }
-
-      .Truck{
-        border: 2px solid transparent;
-        margin-bottom: 10px;
-        margin-top:10px;
-        background-color: white;
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-      }
-
-      .Sedan{
-        border: 2px solid transparent;
-        margin-bottom: 10px;
-        margin-top:10px;
-        background-color: white;
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-      }
-
-      .Sports{
-        border: 2px solid transparent;
-        margin-bottom: 10px;
-        margin-top:10px;
-        background-color: white;
-        border-radius: 15px;
-        -moz-border-radius: 15px;
-      }
-
-      /* order button*/
-      #order{
-        height: 50px;
-        width: 270px;
-        font-size: 25px;
-      }
+      blue - SUV;
+      */
 
     </style>
     
 </head>
 
 <body>
-    <header>
-      <!-- Navigation -->
+    
+  <header>
+    <div class="page-header">
+      <h5> header </h5> 
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
           <a class="navbar-brand" href="#">Virtus et Scientia</a>
@@ -439,23 +319,20 @@
           </div>
         </div>
       </nav>
-    </header>
 
-    <div class="spacer">
     </div>
-    
-    <div id="container">
-    <div id="searchArea">
-      <h1> Find your Car!!! </h1>
-      <!--Blue select-->
-       <label class="mdb-main-label">Class</label>
-      <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here.." id="filterClass">
-        <option value="1">All</option>
-        <option value="2">SUV</option>
-        <option value="3">Sedan</option>
-        <option value="4">Sports</option>
-        <option value="5">Truck</option>
-      </select>
+  </header>
+  <div class="container">
+
+    <div class="jumbotron">
+      <label class="mdb-main-label">Class</label>
+        <select class="mdb-select md-form colorful-select dropdown-primary" searchable="Search here.." id="filterClass">
+          <option value="1">All</option>
+          <option value="2">SUV</option>
+          <option value="3">Sedan</option>
+          <option value="4">Sports</option>
+          <option value="5">Truck</option>
+         </select>
 
       <label class="mdb-main-label">Price</label>
 
@@ -467,265 +344,153 @@
         <option value="5">$50000 - $99999</option>
         <option value="6">$100000 - $199000</option>
       </select>
-      <button> Find </button>
+
+      <h4 class="float-right"> Find the car you want!</h4>
+     <!-- <button type="button" class="btn btn-success" id = "order" >Add to Cart</button> -->
     </div>
 
-      <div id="carListContainer">
+   <!-- sa card ilalagay yung class of cars -->
+    <div class="carListContainer">
+        <!-- CARS -->
 
-      <!-- INSERT CARS HERE! when adding cars, make the div according to type and class ex. (div class="Sports 3") adds a Sports car within $1000-$1999 price range (refer to options above) -->
-      <!-- just simply copy-paste my code for each car and edit the details -->
-
-      <!-- CAR 1 -->
-        <div class="SUV 4">
-          <div class="capsule">
-            <div class="capsuleLeft">
-              <div class="carPic">
-                <!-- might add carousel here for choosing color -->
-                <img class ="carImg" src="https://vignette.wikia.nocookie.net/gtawiki/images/c/c0/Dubsta-GTAV-front.png/revision/latest?cb=20160409171730">
-              </div>
-              <div class="carAtt">
-                <p class="att"> Name: Dubsta</p>
-                <p class="att"> Brand: Benefactor</p>
-                <p class="att"> Class: SUV</p>
-                <p class="att"> Body Style: 4-Door SUV</p>
-                <p class="att"> Capacity: 4 people</p>
-                <p class="att"> Price: $23750</p>
-                <button type="button" class="btn btn-success" id = "order" >Add to Cart</button>
+          <!-- CAR 1 -->
+          <div class="card SUV 4">
+            <div class="card-header" id="headingOne">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <h5 class="float-left">
+                      Dubsta <small class="text-muted"> SUV</small>
+                    </h5>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                  <img src= "https://www.freeiconspng.com/uploads/arrow-down-icon-png-3.png" type="button" alt="img" height="20" width="20" data-toggle="collapse" data-target="#infoDubsta" aria-expanded="true" aria-controls="collapseOne" class="float-right">
+                </div>
               </div>
             </div>
-            <div class="capsuleRight">
-              <p>
-                The Dubsta features good ground clearance, such that its axles and differential can be viewed from a slightly high angle. The SUV features a high displacement engine, a V12 engine based on the badge on the back. This is sent through a permanent four wheel drive system, and then finally through large, high-profile tyres to the ground. The Dubsta is one of the most capable off-roading SUV's, since it has the ability to climb over rocks and make it up steep mountains without getting damaged at all and without hesitation, as its V12 supplies an excellent amount of torque.
-              </p>
-              <p>
-                Its heavy weight can be useful when ramming other cars or pushing them. By feathering the throttle, it is possible to push a medium weight car with ease. The V12 engine, if untuned, will struggle against the weight and thus it cannot attain high speeds, and has average acceleration.
-              </p>
-            </div>  
-          </div>
-        </div>
 
-        <!-- CAR 2 -->
-        <div class="Sports 4">
-          <div class="capsule">
-            <div class="capsuleLeft">
-              <div class="carPic">
-                <!-- might add carousel here for chooding color -->
-                <img class ="carImg" src="https://vignette.wikia.nocookie.net/gtawiki/images/7/78/Dominator-GTAV-front.png/revision/latest?cb=20160702195350">
-              </div>
-              <div class="carAtt">
-                <p class="att"> Name: Dominator</p>
-                <p class="att"> Brand: Vapid</p>
-                <p class="att"> Class: Sports</p>
-                <p class="att"> Body Style: 2-Door Muscle Car</p>
-                <p class="att"> Capacity: 2 people</p>
-                <p class="att"> Price: $35000</p>
-                <button type="button" class="btn btn-success" id = "order" >Add to Cart</button>
+            <div id="infoDubsta" class="collapse" aria-labelledby="headingOne">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-3 cold-md-3 col-sm-3 col-xs-3">
+                    <img class= "rounded" src="https://vignette.wikia.nocookie.net/gtawiki/images/c/c0/Dubsta-GTAV-front.png/revision/latest?cb=20160409171730" height="120" widht="150">
+                    <h6> Name: Dubsta</h6>
+                    <h6> Brand: Benefactor</h6>
+                    <h6> Class: SUV</h6>
+                    <h6> Body Style: 4-Door SUV</h6>
+                    <h6> Capacity: 4 people</h6>
+                    <h5> Price: $23750</h5>
+                    <button type="button" class="btn btn-success" id="order" href="google.com">Buy Car</button>
+                    <button type="button" class="btn btn-warning" id="edit" href="google.com" >Design Car</button>
+                  </div>
+                  <div class="col-lg-9 cold-md-9 col-sm-9 col-xs-9">
+                    <p>
+                      The Dubsta features good ground clearance, such that its axles and differential can be viewed from a slightly high angle. The SUV features a high displacement engine, a V12 engine based on the badge on the back. This is sent through a permanent four wheel drive system, and then finally through large, high-profile tyres to the ground. The Dubsta is one of the most capable off-roading SUV's, since it has the ability to climb over rocks and make it up steep mountains without getting damaged at all and without hesitation, as its V12 supplies an excellent amount of torque.
+                    </p>
+                    <p>
+                      Its heavy weight can be useful when ramming other cars or pushing them. By feathering the throttle, it is possible to push a medium weight car with ease. The V12 engine, if untuned, will struggle against the weight and thus it cannot attain high speeds, and has average acceleration.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="capsuleRight">
-              <p>
-                The main body of the Dominator seems to be heavily inspired by the fifth generation Ford Mustang, with flared wheel arches, connected to the elevated area that spans the lower body. The front headlight pockets are taken from the fifth generation Mustang, with the circular headlights, squared grille and hood being skewed forwards and down.
-                Halfway up the body, the main body line makes a sharp angular turn, signaling the classical inspiration of the first generation Mustang. The car features twelve spoke alloy wheels, wrapped in low profile tires.
-              </p>
-              <p>
-                The rear hatch closely resembles a fastback design, also taken from the first generation Mustang. The front grille design, rear fascia and tail lights and are derived straight from the 1970 Ford Mustang fastback, as is the name Dominator, which was the name of a hood available on early 70's Mustangs. The rear bumper features circular twin-exit exhaust with chrome tips.
-              </p>
-              <p>
-                The vehicle features a modeled V8 engine with a single bank of cams on either side of the engine. On the top is a large cylindrical air filter wrapped with red filter paper. The engine sound is a very high torque V8 engine, with low-silenced exhausts. The badges indicates that the Dominator is powered by a 450cui (7.4L) Supercharged engine.
-              </p>
-            </div>  
           </div>
-        </div>
 
-        <!-- CAR 3 -->
-        <div class="Sports 3">
-          <div class="capsule">
-            <div class="capsuleLeft">
-              <div class="carPic">
-                <!-- might add carousel here for chooding color -->
-                <img class ="carImg" src="https://vignette.wikia.nocookie.net/gtawiki/images/2/2f/Tornado-GTAV-front.png/revision/latest?cb=20180331183746">
-              </div>
-              <div class="carAtt">
-                <p class="att"> Name: Tornado</p>
-                <p class="att"> Brand: DeClasse</p>
-                <p class="att"> Class: Sports</p>
-                <p class="att"> Body Style: 2-Door Convertible</p>
-                <p class="att"> Capacity: 2 people</p>
-                <p class="att"> Price: $55500</p>
-                <button type="button" class="btn btn-success" id = "order" >Add to Cart</button>
+          <!-- CAR 2 -->
+          <div class="card Sports 4">
+            <div class="card-header" id="headingTwo">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <h5 class="float-left">
+                      Dominator <small class="text-muted"> Sports</small>
+                    </h5>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                  <img src= "https://www.freeiconspng.com/uploads/arrow-down-icon-png-3.png" type="button" alt="img" height="20" width="20" data-toggle="collapse" data-target="#infoDominator" aria-expanded="true" aria-controls="collapseOne" class="float-right">
+                </div>
               </div>
             </div>
-            <div class="capsuleRight">
-              <p>
-                The Tornado still resembles a 1958 Chevrolet Bel Air in its front end and overall shape, but the years of the ends have been swapped; the front end now has the '58 Bel Air design and the rear now takes influence from the 1957 Chevrolet or 1957 Bel Air. New features include a bumper similar to a 1957 Cadillac Eldorado, dual headlights (with black surrounds like the '57) and 1957 Bel Air style rear wings and trunk. Other than the dual headlights, and '57 Chevy Bel Air rear, it resembles its predecessor. It also has some design cues taken from a 1958 Plymouth Belvedere.
-              </p>
-              <p>
-                Having only two doors, the Tornado is only designed to carry two occupants. The car does make up for this with its above average top speed and acceleration, as well as its generally stable cornering (even with its long wheelbase that is supposed to hamper the car's maneuverability).
-              </p>
-              <p>
-                The engine is modeled after a V8 with single-overhead camshafts and a large cylindrical air filter. It is coupled to a 4-speed gearbox in a front engine, rear wheel drive layout.
-              </p>
-            </div>  
-          </div>
-        </div>
 
-        <!-- CAR 4 -->
-        <div class="Truck 5">
-          <div class="capsule">
-            <div class="capsuleLeft">
-              <div class="carPic">
-                <!-- might add carousel here for chooding color -->
-                <img class ="carImg" src="https://vignette.wikia.nocookie.net/gtawiki/images/4/47/Kamacho-GTAO-front.png/revision/latest?cb=20190128192114">
-              </div>
-              <div class="carAtt">
-                <p class="att"> Name: Kamacho</p>
-                <p class="att"> Brand: Canis</p>
-                <p class="att"> Class: Truck</p>
-                <p class="att"> Body Style: 4-door Utility Truck</p>
-                <p class="att"> Capacity: 4 people</p>
-                <p class="att"> Price: $18500</p>
-                <button type="button" class="btn btn-success" id = "order" >Add to Cart</button>
+            <div id="infoDominator" class="collapse" aria-labelledby="headingTwo">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-3 cold-md-3 col-sm-3 col-xs-3">
+                    <img class= "rounded" src="https://vignette.wikia.nocookie.net/gtawiki/images/7/78/Dominator-GTAV-front.png/revision/latest?cb=20160702195350" height="120" widht="150">
+                    <h6> Name: Dominator</h6>
+                    <h6> Brand: Vapid</h6>
+                    <h6> Class: Sports</h6>
+                    <h6> Body Style: 2-Door Muscle Car</h6>
+                    <h6> Capacity: 2 people</h6>
+                    <h5> Price: Price: $35000</h5>
+                    <button type="button" class="btn btn-success" id="order" href="google.com">Buy Car</button>
+                    <button type="button" class="btn btn-warning" id="edit" href="google.com" >Design Car</button>
+                  </div>
+                  <div class="col-lg-9 cold-md-9 col-sm-9 col-xs-9">
+                    <p>
+                      The main body of the Dominator seems to be heavily inspired by the fifth generation Ford Mustang, with flared wheel arches, connected to the elevated area that spans the lower body. The front headlight pockets are taken from the fifth generation Mustang, with the circular headlights, squared grille and hood being skewed forwards and down.
+                      Halfway up the body, the main body line makes a sharp angular turn, signaling the classical inspiration of the first generation Mustang. The car features twelve spoke alloy wheels, wrapped in low profile tires.
+                    </p>
+                    <p>
+                      The rear hatch closely resembles a fastback design, also taken from the first generation Mustang. The front grille design, rear fascia and tail lights and are derived straight from the 1970 Ford Mustang fastback, as is the name Dominator, which was the name of a hood available on early 70's Mustangs. The rear bumper features circular twin-exit exhaust with chrome tips.
+                    </p>
+                    <p>
+                      The vehicle features a modeled V8 engine with a single bank of cams on either side of the engine. On the top is a large cylindrical air filter wrapped with red filter paper. The engine sound is a very high torque V8 engine, with low-silenced exhausts. The badges indicates that the Dominator is powered by a 450cui (7.4L) Supercharged engine.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="capsuleRight">
-              <p>
-                The vehicle is strongly based on the Jeep Crew Chief 715 concept, which is itself a homage to the Kaiser Jeep M715. Notable differences include the headlight setup of round and rectangular headlamps rather than the Crew Chief's double round headlamps, as well as a minor change on the lower lamps to feature yellow and white lights. The rear end features a dual tail light setup of red and yellow, as well as white lights on the bumper, opposed to the characteristic Jeep's single light setup of red and white.
-              </p>
-              <p>
-                The Kamacho features a soft top similar to the Mesa and the Crusader, as well as a floodlight bar similar to the Riata and the Barrage. As expected from a vehicle of its type, sump guards are visible in both ends of the underside and static winches on the bumpers.
-              </p>
-              <p>
-                The Kamacho is an adept offroader, with high torque and ground clearance, giving it immense capability offroad. It is capable of tackling even the roughest terrain, with 50/50 torque distribution, giving it an advantage on uneven terrain. Durability is good and can be further improved with the addition of bullbars.
-              </p>
-              <p>
-                The vehicle is powered by a single-cam V8 engine with two air filters on it, powering all four wheels.
-              </p>
-            </div>  
           </div>
-        </div>
 
-        <!-- CAR 5 -->
-        <div class="Sedan 3">
-          <div class="capsule">
-            <div class="capsuleLeft">
-              <div class="carPic">
-                <!-- might add carousel here for chooding color -->
-                <img class ="carImg" src="https://vignette.wikia.nocookie.net/gtawiki/images/c/ca/Premier-GTAV-front.png/revision/latest?cb=20161018180637">
-              </div>
-              <div class="carAtt">
-                <p class="att"> Name: Premier</p>
-                <p class="att"> Brand: Declasse</p>
-                <p class="att"> Class: Sedan</p>
-                <p class="att"> Body Style: Compact Sedan</p>
-                <p class="att"> Capacity: 4 people</p>
-                <p class="att"> Price: $10000</p>
-                <button type="button" class="btn btn-success" id = "order" >Add to Cart</button>
+          <!-- CAR 3 -->
+          <div class="card Sports 3">
+            <div class="card-header" id="headingTwo">
+              <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <h5 class="float-left">
+                      Tornado <small class="text-muted"> Sports</small>
+                    </h5>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                  <img src= "https://www.freeiconspng.com/uploads/arrow-down-icon-png-3.png" type="button" alt="img" height="20" width="20" data-toggle="collapse" data-target="#infoTornado" aria-expanded="true" aria-controls="collapseOne" class="float-right">
+                </div>
               </div>
             </div>
-            <div class="capsuleRight">
-              <p>
-                The Declasse-manufactured Premier is redesigned as a more modernized compact design, which is more suited for urban city streets. It is resembling a cross between the Chevrolet Cobalt and Daewoo Lacetti, with some details that resembles a 2005-2011 T250 Chevrolet Aveo sedan (obviously for its four-door design but also for its tail light design). The front of the car appears similar to Chevrolet Cobalt sedan and the 2001-2006 Toyota Corolla E120. With its enlarged grille located in the bumper region, the car bears an eerie resemblance to the 9th generation Chevrolet Impala. The tail lights appear similar to the 2005-2011 Chevrolet Aveo tail lights, and are reminiscent of the tail lights of the 2006-2009 Ford Fusion and the 2007-2009 Ford Taurus. Its front and rear are also similar to the 2001-2007 Citroen C5, As well as having some resemblance of the third generation Nissan Altima, mainly with the chrome tail lights and muffled V6 sound, as was the case with the 2002-2006 Altima 3.5 SE.
-              </p>
-              <p>
-                The Premier's engine sounds to be a mid to high revving V6, and the beefy engine and 5-speed transmission work together in propelling the vehicle off the line quickly, resulting in a long burnout from the front wheels and yielding an impressive 0-60 time as well as a fantastic top speed for its class. For being a smaller compact sedan, the engine can be overpowering at some times, considering the Premier's lighter total weight and economy themed instead of performance themed drive train layout, but nevertheless the Premier is a good getaway vehicle in terms of performance.
-              </p>
-            </div>  
+
+            <div id="infoTornado" class="collapse" aria-labelledby="headingTwo">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-lg-3 cold-md-3 col-sm-3 col-xs-3">
+                    <img class= "rounded" src="https://vignette.wikia.nocookie.net/gtawiki/images/2/2f/Tornado-GTAV-front.png/revision/latest?cb=20180331183746" height="120" widht="150">
+                    <h6> Name: Tornado</h6>
+                    <h6> Brand: Declasse</h6>
+                    <h6> Class: Sports</h6>
+                    <h6> Body Style: 2-Door Convertible</h6>
+                    <h6> Capacity: 2 people</h6>
+                    <h5> Price: $55500</h5>
+                    <button type="button" class="btn btn-success" id="order" href="google.com">Buy Car</button>
+                    <button type="button" class="btn btn-warning" id="edit" href="google.com" >Design Car</button>
+                  </div>
+                  <div class="col-lg-9 cold-md-9 col-sm-9 col-xs-9">
+                    <p>
+                      The Tornado still resembles a 1958 Chevrolet Bel Air in its front end and overall shape, but the years of the ends have been swapped; the front end now has the '58 Bel Air design and the rear now takes influence from the 1957 Chevrolet or 1957 Bel Air. New features include a bumper similar to a 1957 Cadillac Eldorado, dual headlights (with black surrounds like the '57) and 1957 Bel Air style rear wings and trunk. Other than the dual headlights, and '57 Chevy Bel Air rear, it resembles its predecessor. It also has some design cues taken from a 1958 Plymouth Belvedere.
+                    </p>
+                    <p>
+                      Having only two doors, the Tornado is only designed to carry two occupants. The car does make up for this with its above average top speed and acceleration, as well as its generally stable cornering (even with its long wheelbase that is supposed to hamper the car's maneuverability).
+                    </p>
+                    <p>
+                      The engine is modeled after a V8 with single-overhead camshafts and a large cylindrical air filter. It is coupled to a 4-speed gearbox in a front engine, rear wheel drive layout.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
           
-        <!-- CAR 6 -->
-        <div class="SUV 3">
-          <div class="capsule">
-            <div class="capsuleLeft">
-              <div class="carPic">
-                <!-- might add carousel here for chooding color -->
-                <img class ="carImg" src="https://vignette.wikia.nocookie.net/gtawiki/images/d/da/BeeJayXL-GTAV-front.png/revision/latest?cb=20160929171015">
-              </div>
-              <div class="carAtt">
-                <p class="att"> Name: BeeJay XL</p>
-                <p class="att"> Brand: Karin</p>
-                <p class="att"> Class: SUV</p>
-                <p class="att"> Body Style: Midsize SUV</p>
-                <p class="att"> Capacity: 4 people</p>
-                <p class="att"> Price: $27000</p>
-                <button type="button" class="btn btn-success" id = "order" >Add to Cart</button>
-              </div>
-            </div>
-            <div class="capsuleRight">
-              <p>
-                The BeeJay XL features a retro utilitarian design theme, which seems to be inspired by the Japanese styling found on the Toyota FJ Cruiser, but with a flatter, less aggressive appearance and regular second-row doors (as opposed to suicide doors). The rear bumper and fascia bears some resemblance to the first generation Toyota RAV4, while the grille resembles that of a Hummer H2.
-              </p>
-              <p>
-                The BeeJay XL is powered by a V8 engine, as suggested by the engine cover, which is coupled to a 5-speed gearbox in a front engine, all wheel drive (60% front and 40% rear) layout. Like its real life counterpart, it has a large loud sounding engine.
-              </p>
-            </div>  
-          </div>
-        </div>
-          
-        <!-- CAR 7 -->
-        <div class="Truck 3">
-          <div class="capsule">
-            <div class="capsuleLeft">
-              <div class="carPic">
-                <!-- might add carousel here for chooding color -->
-                <img class ="carImg" src="https://vignette.wikia.nocookie.net/gtawiki/images/0/07/Sadler-GTAV-front.png/revision/latest?cb=20161018180756">
-              </div>
-              <div class="carAtt">
-                <p class="att"> Name: Sadler</p>
-                <p class="att"> Brand: Vapid</p>
-                <p class="att"> Class: Truck</p>
-                <p class="att"> Body Style: 4-door Pickup Truck</p>
-                <p class="att"> Capacity: 4 people</p>
-                <p class="att"> Price: $35000</p>
-                <button type="button" class="btn btn-success" id = "order" >Add to Cart</button>
-              </div>
-            </div>
-            <div class="capsuleRight">
-              <p>
-                The Vapid Sadler features a linear theme and appears to be inspired by North American styling featured on the first generation Ford F250 Super Duty. It only comes in crew cab variants. The Sadler commonly functions as a trailer towing truck or a work truck.
-              </p>
-              <p>
-                The Sadler has average acceleration and a decent top speed. However, the truck's large turning radius is very wide, and needs a lot of braking to corner around sharp bends. This is made up for by the Sadler having great durability. The truck performs pretty well off-road due to a high ground clearance, and a torque loaded engine to haul its weight up steep hills.
-              </p>
-              <p>
-                The Sadler is powered by, what the cover suggests, a V8, true to the badging that says it is a 5.4L V8. Said engine is coupled to a 5-speed gearbox in a front engine, all wheel drive in a 1:4 ratio. The engine sound is of a diesel-type engine, similar to that of the Granger and its variants.
-              </p>
-            
-            </div>  
-          </div>
-        </div>
-          
-        <!-- CAR 8 -->
-        <div class="Sedan 3">
-          <div class="capsule">
-            <div class="capsuleLeft">
-              <div class="carPic">
-                <!-- might add carousel here for chooding color -->
-                <img class ="carImg" src="https://vignette.wikia.nocookie.net/gtawiki/images/b/bb/Sultan-GTAV-front.png/revision/latest?cb=20180331183641">
-              </div>
-              <div class="carAtt">
-                <p class="att"> Name: Sultan</p>
-                <p class="att"> Brand: Karin</p>
-                <p class="att"> Class: Sedan</p>
-                <p class="att"> Body Style: 4-door Saloon</p>
-                <p class="att"> Capacity: 4 people</p>
-                <p class="att"> Price: $12000</p>
-                <button type="button" class="btn btn-success" id = "order" >Add to Cart</button>
-              </div>
-            </div>
-            <div class="capsuleRight">
-              <p>
-                The Sultan's general body shape is partly based on the first-generation Lexus IS (Toyota Altezza), but its prevalence of sharper characteristics lends it a much more striking form. Certain elements such as the rear lamp units are inspired by the Mitsubishi Lancer Evolution V. Other elements (such as the bonnet and spoiler of the Korean Mob variant) bear resemblance to the Mitsubishi Lancer Evolution VI. Interestingly, ordinary Sultans come with blued exhaust tips, similar to the titanium tips on the Futo GT.
-              </p>
-              <p>
-                The Sultan remains fast, grippy, engaging and easy to drive. Like all past Sultan models (and most Subarus) the Sultan is AWD (40% front/ 60% rear torque distribution), providing superior traction and handling over other cars of the same class. While many similarly sized sedans offer similar straight line performance, the added stability of the Sultan allows fast cornering and easy power sliding, making it a good choice for races or getaways. The soft suspension makes it roll over easily when turning. Under-steer is a factor, but the powerful engine and quick handling make it sporty and fun to drive. Although the engine is not the most durable, considering its speed, body deformation is average. Non-tuned Sultans come with alarms, the most popular forms being the horn and beep versions.
-              </p>
-            </div>  
-          </div>
-        </div>
-
-      </div>
+      <!-- END OF CARS -->
     </div>
+    
+  <!-- END OF CONTAINER -->
+  </div>
 </body>
 
 </html>
