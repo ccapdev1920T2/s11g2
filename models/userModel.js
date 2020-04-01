@@ -29,7 +29,7 @@ var UserSchema = new mongoose.Schema({
         required: true
     },
     //license 
-    idNum: { //refers to license fileID
+    fileId: { 
         type: String,
         required: true
     },
