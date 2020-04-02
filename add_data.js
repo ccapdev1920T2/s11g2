@@ -5,6 +5,7 @@ const collection = 'cars';
 db.createDatabase();
 
 var car = {
+    img: "https://vignette.wikia.nocookie.net/gtawiki/images/c/c0/Dubsta-GTAV-front.png/revision/latest?cb=20160409171730",
     name: "Dubsta",
     brand: "Benefactor",
     class: "SUV",
@@ -18,6 +19,7 @@ var car = {
 db.insertOne(collection, car);
 
 var car = {
+    img: "https://vignette.wikia.nocookie.net/gtawiki/images/7/78/Dominator-GTAV-front.png/revision/latest?cb=20160702195350",
     name: "Dominator",
     brand: "Vapid",
     class: "Sports",
@@ -42,6 +44,7 @@ var car = {
 */
 
 var car = {
+    img: "https://vignette.wikia.nocookie.net/gtawiki/images/2/2f/Tornado-GTAV-front.png/revision/latest?cb=20180331183746",
     name: "Tornado",
     brand: "DeClasse",
     class: "Sports",
@@ -54,6 +57,7 @@ var car = {
 db.insertOne(collection, car);
 
 var car = {
+    img: "https://vignette.wikia.nocookie.net/gtawiki/images/4/47/Kamacho-GTAO-front.png/revision/latest?cb=20190128192114",
     name: "Kamacho",
     brand: "Canis",
     class: "Truck",
@@ -66,6 +70,7 @@ var car = {
 db.insertOne(collection, car);
 
 var car = {
+    img: "https://vignette.wikia.nocookie.net/gtawiki/images/c/ca/Premier-GTAV-front.png/revision/latest?cb=20161018180637",
     name: "Premier",
     brand: "DeClasse",
     class:"Sedan",
@@ -78,6 +83,7 @@ var car = {
 db.insertOne(collection, car);
 
 var car = {
+    img: "https://vignette.wikia.nocookie.net/gtawiki/images/d/da/BeeJayXL-GTAV-front.png/revision/latest?cb=20160929171015",
     name: "BeeJay XL",
     brand: "Karin",
     class: "SUV",
@@ -90,6 +96,7 @@ var car = {
 db.insertOne(collection, car);
 
 var car = {
+    img: "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/Sadler-GTAV-front.png/revision/latest?cb=20161018180756",
     name: "Sadler",
     brand: "Vapid",
     class: "Truck",
@@ -102,6 +109,7 @@ var car = {
 db.insertOne(collection, car);
 
 var car = {
+    img: "https://vignette.wikia.nocookie.net/gtawiki/images/b/bb/Sultan-GTAV-front.png/revision/latest?cb=20180331183641",
     name: "Sultan",
     brand: "Karin",
     class: "Sedan",
