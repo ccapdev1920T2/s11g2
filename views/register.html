@@ -1,0 +1,170 @@
+  
+<html>
+
+<head>
+    <link rel = "stylesheet" type = "text/css" href = "/css/bootstrap.css">
+    <script src = "https://code.jquery.com/jquery-3.4.1.min.js" type = "text/javascript"></script>
+    <style>
+      .spacer {
+        height: 100px;
+      }
+        
+        body {
+            background-image: url("https://ccsanangelo.org/wp-content/uploads/2016/12/simple-background-color-has-web-page-background-color.jpg");
+        }
+        
+        table {
+            background-color: white;
+        }
+    </style>
+    
+</head>
+
+<body class = "p-3 mb-2 bg-light text-dark">
+    
+    {{> header}}
+    
+    <div class = "spacer"></div>
+
+    <div class = "container">
+      <table class = "table table-striped table-bordered table-hover table-sm">
+      <form id="signup" method="post">
+          <tr>
+              <td>First Name: </td>
+              <td><input type="text", id="fname", name="fName"></td>
+          </tr>
+          <tr>
+              <td>Last Name: </td>
+              <td><input type="text", id="lname", name="lName"></td>
+          </tr>
+          <tr>
+              <td>Username: </td>
+              <td><input type="text", id="username", name="uName"></td>
+          </tr>
+          <tr>
+              <td>Password: </td>
+              <td><input type="password", id="password", name=" pw"></td>
+          </tr>
+          <tr>
+            <td>Confirm Password: </td>
+            <td><input type = "password", id = "confirmPassword", name = "confirmPassword"></td>
+          </tr>
+          <tr>
+              <td>Email: </td>
+              <td><input type="email", id="email", name="email"></td>
+          </tr>
+          <tr>
+              <td>Birthday: </td>
+              <td><input type="date", id="bday", name="bDay"></td>
+          </tr>
+          <tr>
+              <td>Credit Card Numbers: </td> 
+              <!-- edit this to make these 4 sub-input into ONE INPUT as name="ccNo" -->
+              <td><input size="4", maxlength="4", type="text", id="numbers1", name="ccNo">-
+              <input size="4", maxlength="4", type="text", id="numbers2", name="numbers2">-
+              <input size="4", maxlength="4", type="text", id="numbers3", name="numbers3">-
+              <input size="4", maxlength="4", type="text", id="numbers4", name="numbers4"></td>
+          </tr>
+          <tr>
+              <td>Credit Card Expiration: </td>
+              <td><input size="4", maxlength="5", type="text", id="expiration", name="ccExp"></td>
+          </tr>
+          <tr>
+              <td>Credit Card PIN: </td>
+              <td><input size="4", maxlength="3", type="text", id="pin", name="ccPin"></td>
+          </tr>
+          <tr>
+              <td>Driver's License Number: </td>
+              <td><input type = "text", id = "fileId", name = "fileId"></td>
+          </tr>
+          <tr>
+              <td>Driver's License Issue Date: </td>
+              <td><input type = "date", id = "startDate", name = "startDate"></td>
+          </tr>
+          <tr>
+              <td>Driver's License Expiry Date: </td>
+              <td><input type = "date", id = "expDate", name = "expDate"></td>
+          </tr>
+          <tr>
+              <td><button id="submit" class = "btn btn-primary">Submit</button></td>
+          </tr>
+      </form>
+      </table>
+
+      <p id = "warning"></p>
+
+    </div>
+
+    <script type = "text/javascript">
+      function checkField(field, bool) {
+        var valid = bool;
+        if(field.val() == '') {
+          valid = false;
+          field.css('border-color', 'red');
+          $("#warning").text('Please enter the required field/s.');
+        }
+        else {
+          field.css('border-color', 'white');
+        }
+        return valid;
+      }
+      function checkEmail(field, bool) {
+        var valid = bool;
+        var atIndex = field.val().indexOf('@');
+        var dotIndex = field.val().lastIndexOf('.');
+        if(atIndex == -1 || dotIndex == -1 || atIndex > dotIndex) {
+          valid = false;
+          field.css('border-color', 'red');
+          $("#warning").text('Please input a valid E-mail address.');
+        }
+        else {
+          field.css('border-color', 'white');
+        }
+        return valid;
+      }
+      function checkPassword(field1, field2, bool) {
+        var valid = bool;
+        if(field1.val() == '' || field2.val() == '' || field1.val() != field2.val()) {
+          valid = false;
+          field1.css('border-color', 'red');
+          field2.css('border-color', 'red');
+          $("#warning").text('Please re-input the password and confirm password.');
+        }
+        else {
+          field1.css('border-color', 'white');
+          field2.css('border-color', 'white');
+        }
+        return valid;
+      }
+      function checkFile(field, bool) {
+        var valid = bool;
+        if(field.get(0).files.length == 0) {
+          valid = false;
+          $("#warning").text('Please send a copy of your license.');
+        }
+        return valid;
+      }
+      $("#submit").click(function() {
+        var valid = true;
+        valid = checkFile($("#license"), valid);
+        valid = checkField($("#fname"), valid);
+        valid = checkField($("#lname"), valid);
+        valid = checkField($("#username"), valid);
+        valid = checkEmail($("#email"), valid);
+        valid = checkField($("#bday"), valid);
+        valid = checkPassword($("#password"), $("#confirmPassword"), valid);
+        valid = checkField($("#numbers1"), valid);
+        valid = checkField($("#numbers2"), valid);
+        valid = checkField($("#numbers3"), valid);
+        valid = checkField($("#numbers4"), valid);
+        valid = checkField($("#expiration"), valid);
+        valid = checkField($("#pin"), valid);
+        if(valid == true) {
+          $("#warning").text('');
+          window.location.href = "/user";
+        }
+      });
+    </script>
+
+  </body>
+</html>
