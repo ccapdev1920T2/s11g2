@@ -60,10 +60,7 @@
           <tr>
               <td>Credit Card Numbers: </td> 
               <!-- edit this to make these 4 sub-input into ONE INPUT as name="ccNo" -->
-              <td><input size="4", maxlength="4", type="text", id="numbers1", name="ccNo">-
-              <input size="4", maxlength="4", type="text", id="numbers2", name="numbers2">-
-              <input size="4", maxlength="4", type="text", id="numbers3", name="numbers3">-
-              <input size="4", maxlength="4", type="text", id="numbers4", name="numbers4"></td>
+              <td><input size="4", maxlength="4", type="text", id="numbers", name="ccNo"></td>
           </tr>
           <tr>
               <td>Credit Card Expiration: </td>
@@ -153,10 +150,7 @@
         valid = checkEmail($("#email"), valid);
         valid = checkField($("#bday"), valid);
         valid = checkPassword($("#password"), $("#confirmPassword"), valid);
-        valid = checkField($("#numbers1"), valid);
-        valid = checkField($("#numbers2"), valid);
-        valid = checkField($("#numbers3"), valid);
-        valid = checkField($("#numbers4"), valid);
+        valid = checkField($("#numbers"), valid);
         valid = checkField($("#expiration"), valid);
         valid = checkField($("#pin"), valid);
         if(valid == true) {
