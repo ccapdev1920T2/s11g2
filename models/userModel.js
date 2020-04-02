@@ -12,10 +12,23 @@ var UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    uName: {
+        type: String,
+        required: true
+    },
     pw: {
         type: String,
         required: true
     },
+    email: {
+        type: String,
+        required: true
+    },
+    bDay: {
+        type: Date,
+        required: true
+    },
+    //credit card
     ccNo: {
         type: Number,
         required: true
@@ -38,10 +51,6 @@ var UserSchema = new mongoose.Schema({
         required: true
     },
     expDate: {
-        type: Date,
-        required: true
-    },
-    bDay: {
         type: Date,
         required: true
     }
