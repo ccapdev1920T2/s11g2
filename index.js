@@ -7,6 +7,7 @@
 /* Import Modules Here */
 const express = require('express');
 const hbs = require('hbs');
+const db = require('./models/db.js');
 
 /* Port */
 const app = express();
@@ -56,6 +57,9 @@ app.use(express.static('public'));
 app.use(function(req, res, next) {
     res.status(404).send('File is not in the server!');
 });
+
+/* PARTIALS */
+hbs.registerPartials(__dirname + '/views/partials');
 
 /* Listeners */
 app.listen(port, function() {
