@@ -45,6 +45,10 @@
                     </select></td>
                 </tr>
                 <tr>
+                    <td>Body Style: </td>
+                    <td><input type="text", id="bodystyle", name="bodystyle"></td>
+                </tr>
+                <tr>
                     <td>Capacity: </td>
                     <td><input type="text", id="capacity", name="capacity"></td>
                 </tr>
@@ -85,6 +89,7 @@
             valid = checkField($("#img"), valid);
             valid = checkField($("#name"), valid);
             valid = checkField($("#brand"), valid);
+            valid = checkField($(#bodystyle), valid);
             valid = checkField($("#capacity"), valid);
             valid = checkField($("#price"), valid);
             valid = checkField($("#desc"), valid);
