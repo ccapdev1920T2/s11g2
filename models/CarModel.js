@@ -40,6 +40,7 @@ var CarSchema = new mongoose.Schema({
     },
     imgLink: {
         type: String,
+        minlength: 3,
         required: true
     }
 
