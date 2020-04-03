@@ -14,13 +14,6 @@ const addcarController = {
 
     postAddCar: function (req, res) {
 
-        /*
-            when submitting forms using HTTP POST method
-            the values in the input fields are stored in the req.body object
-            each <input> element is identified using its `name` attribute
-            Example: the value entered in <input type="text" name="fName">
-            can be retrieved using req.body.fName
-        */
         var imgLink = req.body.img;
         var name = req.body.name;
         var brand = req.body.brand;
@@ -30,11 +23,6 @@ const addcarController = {
         var price = req.body.price;
         var description = req.body.desc;
 
-        /*
-            calls the function insertOne()
-            defined in the `database` object in `../models/db.js`
-            this function adds a document to collection `users`
-        */
         db.insertOne(Car, {
             name: name,
             brand: brand,
@@ -46,9 +34,8 @@ const addcarController = {
             imgLink: imgLink
         });
 
-
     }
 
 }
 
-module.exports = signupController;
+module.exports = addcarController;
