@@ -44,7 +44,7 @@ imgLink
 */
 
 var car = {
-    imglink: "https://vignette.wikia.nocookie.net/gtawiki/images/2/2f/Tornado-GTAV-front.png/revision/latest?cb=20180331183746",
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/2/2f/Tornado-GTAV-front.png/revision/latest?cb=20180331183746",
     name: "Tornado",
     brand: "DeClasse",
     carClass: "Sports",
