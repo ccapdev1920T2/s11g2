@@ -6,10 +6,12 @@ var mongoose = require('mongoose');
 var CarSchema = new mongoose.Schema({
     name: {
         type: String,
+        minlength: 3,
         required: true
     },
     brand: {
         type: String,
+        minlength: 3,
         required: true
     },
     carClass: {
@@ -18,18 +20,22 @@ var CarSchema = new mongoose.Schema({
     },
     bodyStyle: {
         type: String,
+        minlength: 3,
         required: true
     },
     capacity: {
         type: Number,
+        min: 2,
         required: true
     },
     price: {
         type: Number,
+        min: 0,
         required: true
     },
     description: {
         type: String,
+        minlength: 3,
         required: true
     },
     imgLink: {
