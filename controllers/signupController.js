@@ -46,7 +46,7 @@ const signupController = {
             fName: fName,
             lName: lName,
             uName: uName,
-            pw: pw
+            pw: pw,
             email: email,
             bDay: bDay,
             //credit card
