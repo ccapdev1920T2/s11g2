@@ -13,6 +13,8 @@ const db = require('./models/db.js');
 const app = express();
 const port = 3000;
 
+const routes = require('./routes/routes.js');
+
 db.connect();
 
 /* View Engine */
@@ -54,6 +56,8 @@ app.get('/search', function(req, res) {
 
 /* ACCESS STATIC FILES */
 app.use(express.static('public'));
+
+app.use('/', routes);
 
 /* 404 FILE NOT FOUND */
 app.use(function(req, res, next) {

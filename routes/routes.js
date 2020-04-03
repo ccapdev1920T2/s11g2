@@ -32,12 +32,6 @@ app.get('/signup', signupController.getSignUp);
 // when a client sends an HTTP POST request for `/signup`
 app.post('/signup', signupController.postSignUp);
 
-// execute function getProfile()
-// defined in object `profileController` in `../controllers/profileController.js`
-// when a client sends an HTTP GET request for `/profile/:idNum`
-// where `idNum` is a parameter
-app.get('/profile/:idNum', profileController.getProfile);
-
 // exports the object `app` (defined above)
 // when another script exports from this file
 module.exports = app;
