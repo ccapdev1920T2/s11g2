@@ -15,8 +15,6 @@ const port = 3000;
 
 const routes = require('./routes/routes.js');
 
-db.connect();
-
 /* View Engine */
 app.set('view engine', 'hbs');
 
@@ -53,12 +51,14 @@ app.get('/search', function(req, res) {
 });
 
 /* Functions */
+app.use(express.urlencoded({extended: true}));
 
 /* ACCESS STATIC FILES */
 app.use(express.static('public'));
 
 app.use('/', routes);
-app.use(express.urlencoded({extended: true}));
+
+db.connect();
 
 /* 404 FILE NOT FOUND */
 app.use(function(req, res, next) {
