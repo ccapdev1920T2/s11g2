@@ -48,11 +48,6 @@ app.get('/search', function(req, res) {
     res.render('search');
 });
 
-/* ADD CAR PAGE */
-app.get('/addcar', function(req, res) {
-    res.render('addcar');
-});
-
 /* Functions */
 
 /* ACCESS STATIC FILES */

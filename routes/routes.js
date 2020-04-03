@@ -1,0 +1,43 @@
+
+// import module `express`
+const express = require('express');
+
+// import module `controller` from `../controllers/controller.js`
+const controller = require('../controllers/controller.js');
+
+// import module `signupController` from `../controllers/signupController.js`
+const signupController = require('../controllers/signupController.js');
+
+// import module `successController` from `../controllers/successController.js`
+const addCarController = require('../controllers/addcarController.js')
+
+const app = express();
+
+app.get('/addcar', addCarController.getAddCar);
+
+app.post('/addcar', addCarController.postAddCar);
+
+// execute function getIndex()
+// defined in object `controller` in `../controllers/controller.js`
+// when a client sends an HTTP GET request for `/`
+app.get('/', controller.getIndex);
+
+// execute function getSignUp()
+// defined in object `signupController` in `../controllers/signupController.js`
+// when a client sends an HTTP GET request for `/signup`
+app.get('/signup', signupController.getSignUp);
+
+// execute function postSignUp()
+// defined in object `signupController` in `../controllers/signupController.js`
+// when a client sends an HTTP POST request for `/signup`
+app.post('/signup', signupController.postSignUp);
+
+// execute function getProfile()
+// defined in object `profileController` in `../controllers/profileController.js`
+// when a client sends an HTTP GET request for `/profile/:idNum`
+// where `idNum` is a parameter
+app.get('/profile/:idNum', profileController.getProfile);
+
+// exports the object `app` (defined above)
+// when another script exports from this file
+module.exports = app;
