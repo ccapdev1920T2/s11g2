@@ -14,7 +14,6 @@ const addcarController = {
 
     postAddCar: function (req, res) {
 
-        var imgLink = req.body.img;
         var name = req.body.name;
         var brand = req.body.brand;
         var carClass = req.body.class;
@@ -22,6 +21,7 @@ const addcarController = {
         var capacity = req.body.capacity;
         var price = req.body.price;
         var description = req.body.desc;
+        var imgLink = req.body.img;
 
         db.insertOne(Car, {
             name: name,

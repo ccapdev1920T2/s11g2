@@ -2,7 +2,7 @@
 // import module `mongoose`
 var mongoose = require('mongoose');
 
-// defines the schema for collection `users`
+// defines the schema for collection `cars`
 var CarSchema = new mongoose.Schema({
     name: {
         type: String,

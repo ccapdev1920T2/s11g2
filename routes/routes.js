@@ -8,14 +8,13 @@ const controller = require('../controllers/controller.js');
 // import module `signupController` from `../controllers/signupController.js`
 const signupController = require('../controllers/signupController.js');
 
-// import module `successController` from `../controllers/successController.js`
-const addCarController = require('../controllers/addcarController.js')
+const addcarController = require('../controllers/addcarController.js')
 
 const app = express();
 
-app.get('/addcar', addCarController.getAddCar);
+app.get('/addcar', addcarController.getAddCar);
 
-app.post('/addcar', addCarController.postAddCar);
+app.post('/addcar', addcarController.postAddCar);
 
 // execute function getIndex()
 // defined in object `controller` in `../controllers/controller.js`

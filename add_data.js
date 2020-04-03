@@ -1,9 +1,9 @@
 const db = require('./models/db.js');
 
-const Car = require('../models/CarModel.js');
-const User = require('../models/UserModel.js');
+const Car = require('./models/CarModel.js');
+const User = require('./models/UserModel.js');
 
-db.createDatabase();
+db.connect();
 
 var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/c/c0/Dubsta-GTAV-front.png/revision/latest?cb=20160409171730",

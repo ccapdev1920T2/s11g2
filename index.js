@@ -58,6 +58,7 @@ app.get('/search', function(req, res) {
 app.use(express.static('public'));
 
 app.use('/', routes);
+app.use(express.urlencoded({extended: true}));
 
 /* 404 FILE NOT FOUND */
 app.use(function(req, res, next) {
