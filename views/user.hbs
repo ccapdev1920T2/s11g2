@@ -77,7 +77,7 @@
 
 <body>
     
-    <header> {{> header}} </header>
+  {{> header}}
 
     <div class="spacer">
     </div>
@@ -92,11 +92,18 @@
           </div>
           <div class = "capsuleRight">
             <p>
-              Username: ReyDelimaJr
+              Username: {{uName}}
             </p>
             <p>
-              Joined Since: February 29, 2020
+              Name: {{fName}} {{lName}}
             </p>
+            <p>
+              Email: {{email}}
+            </p>
+            <p>
+              Birthday: {{bDay}}
+            </p>
+            
             <p id = "favoriteCar"></p>
             <label for = "favorite"> What is your favorite car?: </label>
             <input type = "text" id = "favorite" name = "favorite">

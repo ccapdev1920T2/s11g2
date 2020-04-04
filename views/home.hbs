@@ -10,10 +10,6 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> </script>
   <style>
 
-    .center {
-      text-align: center;
-    }
-
     header {
       position: relative;
       background-color: black;
@@ -332,29 +328,31 @@
 </head>
 
 <body>
+  
+  {{> header}}
+
   <header>
-    {{> header}}
   <!-- OVERLAY AND VIDEO -->
     <div class="overlay"></div>
     <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
       <source src="https://www.videvo.net/videvo_files/converted/2015_08/preview/Spedometer.mp440174.webm" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
     </video>
-    <div class="container h-100">
-      <div class="d-flex h-100 text-center align-items-center">
-        <div class="w-100 text-white">
-          <h1 class="display-3">Experience the New Technology</h1>
-          <p class="lead mb-0">with Los Santos dealership by Virtus et Scientia</p>
-          <!-- BUTTON -->
-          <div class="containerButton">
-            <div class="wrap">
-              <a href="/search" target="_blank">
-              <div class="first">Explore</div>
-              </a>
-            </div>
+      <div class="container h-100">
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <h1 class="display-3">Experience the New Technology</h1>
+            <p class="lead mb-0">with Los Santos dealership by Virtus et Scientia</p>
+            <!-- BUTTON -->
+                <div class="containerButton">
+                  <div class="wrap">
+                    <a href="/search" target="_blank">
+                      <div class="first">Explore</div>
+                    </a>
+                </div>
+              </div>
+            <!-- BUTTON END -->
           </div>
-          <!-- BUTTON END -->
         </div>
-      </div>
     </div>
     <!-- OVERLAY AND VIDEO END -->
   </header>
@@ -453,7 +451,7 @@
     <div class="row">
       <div class="col-md-8 mx-auto">
         <h1 class="display-2">Make Your Own</h1>
-        <p class="lead"> Using the services of Virtus et Scientia, not only can you find the best car deals from Los Santos, but you can also get to <a href="/build">customize your own car</a>!</p>
+        <p class="lead"> Using the services of Virtus et Scientia, not only can you find the best car deals from Los Santos, but you can also get to <a href="build.html">customize your own car</a>!</p>
       </div>
     </div>
   </div>
@@ -470,7 +468,7 @@
         <!-- Team Member 1 -->
         <div class="col-xl-3 col-md-6 mb-3">
           <div class="card border-0 shadow">
-            <a href = "/contact">
+            <a href = "contact.html">
               <img src="https://scontent.fmnl4-1.fna.fbcdn.net/v/t31.0-8/s960x960/25073221_1774868472533140_8438047959028331544_o.jpg?_nc_cat=103&_nc_ohc=jrIEEGTw9IEAX8yx4rj&_nc_ht=scontent.fmnl4-1.fna&_nc_tp=7&oh=f55232d24d070316737d321bddb8dc0d&oe=5EFF63FB" class="card-img-top" alt="...">
             </a>
             <div class="card-body text-center">
@@ -483,7 +481,7 @@
         <!-- Team Member 2 -->
         <div class="col-xl-3 col-md-6 mb-3">
           <div class="card border-0 shadow">
-            <a href = "/contact">
+            <a href = "contact.html">
               <img src="https://scontent.fmnl4-6.fna.fbcdn.net/v/t1.0-9/84143960_2968431449848369_3622852811651284992_n.jpg?_nc_cat=108&_nc_ohc=2LWiToAegv8AX_Lj40n&_nc_ht=scontent.fmnl4-6.fna&oh=ca15393d3d65cf4fed25e7361f3301fc&oe=5EB570E7" class="card-img-top" alt="...">
             </a>
             <div class="card-body text-center">
@@ -496,7 +494,7 @@
         <!-- Team Member 3 -->
         <div class="col-xl-3 col-md-6 mb-3">
           <div class="card border-0 shadow">
-            <a href = "/contact">
+            <a href = "contact.html">
               <img src="https://scontent.fmnl4-5.fna.fbcdn.net/v/t1.0-9/s960x960/81637383_10221712192739224_8092444527194800128_o.jpg?_nc_cat=106&_nc_ohc=uoqifUoxPAIAX_FjuFo&_nc_ht=scontent.fmnl4-5.fna&_nc_tp=7&oh=e8d35be09cb8d73ee47f47edd6404644&oe=5EBD82E0" class="card-img-top" alt="...">
             </a>
             <div class="card-body text-center">
