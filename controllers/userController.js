@@ -14,7 +14,7 @@ const userController = {
     getUser: function (req, res) {
 
         // query where `idNum` is equal to URL parameter `idNum`
-        var query = {idNum: req.params.idNum};
+        var query = {uName: req.params.uName};
 
         // fields to be returned
         var projection = 'fName lName uName email bDay';
@@ -37,7 +37,7 @@ const userController = {
                     lName: result.lName,
                     uName: result.uName,
                     email: result.email,
-                    bDay: result.bDay
+                    bDay: result.bDay,
                 };
 
                 // render `../views/profile.hbs`

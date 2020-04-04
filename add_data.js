@@ -121,7 +121,7 @@ var car = {
 
 db.insertOne(Car, car);
 
-var admin ={
+var admin = { 
         fName: "admin",
         lName: "admin",
         uName: "admin",
@@ -137,3 +137,5 @@ var admin ={
         startDate: '2069-07-08',//...new Date(2069, 7, 8),
         expDate: '2420-07-08'   //...new Date(2420, 7, 8)
 }
+
+db.insertOne(User, admin);

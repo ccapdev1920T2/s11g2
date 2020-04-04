@@ -34,7 +34,7 @@ app.get('/home', homeController.getHome);
 
 app.get('/register', registerController.getRegister);
 
-app.get('/user', userController.getUser);
+app.get('/user/:uName', userController.getUser);
 
 app.get('/build', buildController.getBuild);
 
