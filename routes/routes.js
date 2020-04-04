@@ -16,6 +16,8 @@ const buildController = require('../controllers/buildController.js');
 
 const contactController = require('../controllers/contactController.js');
 
+const deleteController = require('../controllers/deleteController.js');
+
 const app = express();
 
 app.get('/addcar', addcarController.getAddCar);
@@ -35,6 +37,10 @@ app.get('/user', userController.getUser);
 app.get('/build', buildController.getBuild);
 
 app.get('/contact', contactController.getContact);
+
+app.get('/delete', deleteController.getDelete);
+
+app.post('/delete', deleteController.postDelete);
 
 // exports the object `app` (defined above)
 // when another script exports from this file
