@@ -48,6 +48,8 @@ app.get('/update/:name', updateController.getUpdate);
 
 app.post('/update/:name', updateController.postUpdate);
 
+app.get('/getCheckID', registerController.getCheckID);
+
 // exports the object `app` (defined above)
 // when another script exports from this file
 module.exports = app;
