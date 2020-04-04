@@ -42,6 +42,11 @@ var CarSchema = new mongoose.Schema({
         type: String,
         minlength: 3,
         required: true
+    },
+    optionImg: {
+        type: String,
+        minlength: 3,
+        required: true
     }
 
 });

@@ -40,7 +40,7 @@ app.get('/getCheckID', registerController.getCheckID);
 
 app.get('/user/:uName', userController.getUser);
 
-app.get('/build', buildController.getBuild);
+app.get('/build/:name', buildController.getBuild);
 
 app.get('/contact', contactController.getContact);
 

@@ -7,6 +7,7 @@ db.connect();
 
 var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/c/c0/Dubsta-GTAV-front.png/revision/latest?cb=20160409171730",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/f/fa/Dubsta2-GTAV-front.png/revision/latest?cb=20160318211333",
     name: "Dubsta",
     brand: "Benefactor",
     carClass: "SUV",
@@ -21,6 +22,7 @@ db.insertOne(Car, car);
 
 var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/7/78/Dominator-GTAV-front.png/revision/latest?cb=20160702195350",
+    optionImg: "https://www.gta5rides.com/vehicleImages/cropped/dominator.jpg.jpg",
     name: "Dominator",
     brand: "Vapid",
     carClass: "Sports",
@@ -45,6 +47,7 @@ imgLink
 
 var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/2/2f/Tornado-GTAV-front.png/revision/latest?cb=20180331183746",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/1/18/Tornado2Up-GTAV-front.png/revision/latest?cb=20180331183743",
     name: "Tornado",
     brand: "DeClasse",
     carClass: "Sports",
@@ -58,6 +61,7 @@ db.insertOne(Car, car);
 
 var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/4/47/Kamacho-GTAO-front.png/revision/latest?cb=20190128192114",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/9/90/Kamacho-GTAO-front-TruePatriotLivery.png/revision/latest?cb=20190128193451",
     name: "Kamacho",
     brand: "Canis",
     carClass: "Truck",
@@ -71,6 +75,7 @@ db.insertOne(Car, car);
 
 var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/c/ca/Premier-GTAV-front.png/revision/latest?cb=20161018180637",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/b/b0/Premier-GTAO-RGSC3.jpg/revision/latest?cb=20200401222306",
     name: "Premier",
     brand: "DeClasse",
     carClass:"Sedan",
@@ -84,6 +89,7 @@ db.insertOne(Car, car);
 
 var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/d/da/BeeJayXL-GTAV-front.png/revision/latest?cb=20160929171015",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/d/d9/BeejayXL-GTAO-RGSC3.jpg/revision/latest?cb=20200403030536",
     name: "BeeJay XL",
     brand: "Karin",
     carClass: "SUV",
@@ -97,6 +103,7 @@ db.insertOne(Car, car);
 
 var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/0/07/Sadler-GTAV-front.png/revision/latest?cb=20161018180756",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/9/96/Sadler_GTAV_CabLights_FrontQuarterView.jpg/revision/latest?cb=20140918021437",
     name: "Sadler",
     brand: "Vapid",
     carClass: "Truck",
@@ -110,6 +117,7 @@ db.insertOne(Car, car);
 
 var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/b/bb/Sultan-GTAV-front.png/revision/latest?cb=20180331183641",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/c/c1/SultanRS-GTAO-front.png/revision/latest?cb=20160128182129",
     name: "Sultan",
     brand: "Karin",
     carClass: "Sedan",

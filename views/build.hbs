@@ -56,7 +56,8 @@
 
       #editor{
         margin:auto;
-        height: 70%;
+        padding: 5px;
+        height: 140.5%;
         width: 90%;
         border-radius: 15px;
         -moz-border-radius: 15px;
@@ -87,6 +88,7 @@
         border-left: 80% solid transparent;
         margin-top: 2%;
         margin-left: 70%;
+        padding-top: 200px;
         float:left;
         width: 60%;
         height:100%;
@@ -132,11 +134,13 @@
 
     <div class="spacer">
     </div>
+    <div class="spacer">
+    </div>
 
     <div id="topContainer">
       <h1> Design your car </h1>  
 
-        <button type="button" class="btn btn-secondary red">Red</button>
+        {{!-- <button type="button" class="btn btn-secondary red">Red</button>
         <button type="button" class="btn btn-secondary blue">Blue</button>
         <button type="button" class="btn btn-secondary black">Black</button>
         <button type="button" class="btn btn-secondary white">White</button>
@@ -149,25 +153,26 @@
             <a class="dropdown-item" href="#" selected>Dropdown</a>
             <a class="dropdown-item" href="#">Dropdown link</a>
           </div>
-        </div>
+        </div> --}}
 
     </div>
 
-    <div class="spacer">
-    </div>
+    {{!-- <div class="spacer">
+    </div> --}}
 
     <div id="editor">
       <div id="carLeft">
-        <img id= "carImg" src="https://vignette.wikia.nocookie.net/gtawiki/images/6/6c/Dominator-GTAV-front-MuscleModded1.png/revision/latest?cb=20181011165501">
+        <img id= "carImg" src="{{imgLink}}">
+        <img id= "carImg" src="{{optionImg}}">
       </div>
       <div id="carRight">
         <div id="carAtt">
-          <p> Name: Dominator</p>
-          <p> Brand: Vapid</p>
-          <p> Class: Sports</p>
-          <p> Body Style: 2-Door Muscle Car</p>
-          <p> Capacity: 2 people</p>
-          <p> Price: $35000</p>
+          <p> Name: {{name}}</p>
+          <p> Brand: {{brand}}</p>
+          <p> Class: {{carClass}}</p>
+          <p> Body Style: {{bodyStyle}}</p>
+          <p> Capacity: {{capacity}} people</p>
+          <p> Price: ${{price}}</p>
           <br>
           <button type="button" class="btn btn-success" id = "order" >Purchase</button>
         </div>
