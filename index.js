@@ -37,6 +37,15 @@ app.use(function(req, res, next) {
 /* PARTIALS */
 hbs.registerPartials(__dirname + '/views/partials');
 
+/* HELPERS */
+hbs.registerHelper('if_eq', function(a, b, opts) {
+    if (a == b) {
+        return opts.fn(this);
+    } else {
+        return opts.inverse(this);
+    }
+});
+
 /* Listeners */
 app.listen(port, function() {
     console.log('App listening at port ' + port);

@@ -108,6 +108,12 @@
             <label for = "favorite"> What is your favorite car?: </label>
             <input type = "text" id = "favorite" name = "favorite">
             <button id = "submit" class = "btn btn-primary"> Submit </button>
+
+            {{#if_eq uName "admin"}}
+              <button><a href="/addcar">Add a Car</a></button>
+              <button><a href="/chooseUpdate">Update a Car</a></button>
+              <button><a href="/delete">Delete a Car</a></button>
+            {{/if_eq}}
           </div>
         </div>
       </div>

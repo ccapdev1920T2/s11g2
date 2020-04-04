@@ -20,6 +20,8 @@ const deleteController = require('../controllers/deleteController.js');
 
 const updateController = require('../controllers/updateController.js');
 
+const chooseUpdateController = require('../controllers/chooseUpdateController.js');
+
 const app = express();
 
 app.get('/addcar', addcarController.getAddCar);
@@ -49,6 +51,10 @@ app.post('/delete', deleteController.postDelete);
 app.get('/update/:name', updateController.getUpdate);
 
 app.post('/update/:name', updateController.postUpdate);
+
+app.get('/chooseUpdate', chooseUpdateController.getChoose);
+
+app.post('/chooseUpdate', chooseUpdateController.postChoose);
 
 
 // exports the object `app` (defined above)
