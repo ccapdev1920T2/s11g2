@@ -11,13 +11,13 @@ const signupController = {
 
     // executed when the client sends an HTTP GET request `/signup`
     // as defined in `../routes/routes.js`
-    getSignUp: function (req, res) {
-        res.render('signup');
+    getRegister: function (req, res) {
+        res.render('register');
     },
 
     // executed when the client sends an HTTP POST request `/signup`
     // as defined in `../routes/routes.js`
-    postSignUp: function (req, res) {
+    postRegister: function (req, res) {
 
         // when submitting forms using HTTP POST method
         // the values in the input fields are stored in the req.body object
@@ -65,7 +65,7 @@ const signupController = {
         // passing values using URL
         // which calls getSuccess() method defined in `./successController.js`
         res.redirect('/success?fName=' + fName +'&lName=' + lName + '&uName=' + uName);
-    }
+    },
 
 
         /*
