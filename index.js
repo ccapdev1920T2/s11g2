@@ -45,11 +45,6 @@ app.get('/register', function(req, res) {
     res.render('register');
 });
 
-/* SEARCH PAGE */
-app.get('/search', function(req, res) {
-    res.render('search');
-});
-
 /* Functions */
 app.use(express.urlencoded({extended: true}));
 

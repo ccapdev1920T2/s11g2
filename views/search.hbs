@@ -442,7 +442,32 @@
       <!-- INSERT CARS HERE! when adding cars, make the div according to type and class ex. (div class="Sports 3") adds a Sports car within $1000-$1999 price range (refer to options above) -->
       <!-- just simply copy-paste my code for each car and edit the details -->
 
-      <!-- CAR 1 -->
+      {{#each contents}}
+        <div class="{{carClass}}">
+          <div class="capsule">
+            <div class="capsuleLeft">
+              <div class="carPic">
+                <!-- might add carousel here for choosing color -->
+                <img class ="carImg" src="{{imgLink}}">
+              </div>
+              <div class="carAtt">
+                <p class="att"> Name: {{name}}</p>
+                <p class="att"> Brand: {{brand}}</p>
+                <p class="att"> Class: {{carClass}}</p>
+                <p class="att"> Body Style: {{bodyStyle}}</p>
+                <p class="att"> Capacity: {{capacity}}</p>
+                <p class="att"> Price: ${{price}}</p>
+                <button type="button" class="btn btn-success" id = "order" >Add to Cart</button>
+              </div>
+            </div>
+            <div class="capsuleRight">
+              <p>{{description}}</p>
+            </div>  
+          </div>
+        </div>
+      {{/each}}
+
+      {{!-- <!-- CAR 1 -->
         <div class="SUV 4">
           <div class="capsule">
             <div class="capsuleLeft">
@@ -689,7 +714,7 @@
               </p>
             </div>  
           </div>
-        </div>
+        </div> --}}
 
       </div>
     </div>
