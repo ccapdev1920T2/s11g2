@@ -4,6 +4,7 @@
 <head>
     <link rel = "stylesheet" type = "text/css" href = "/css/bootstrap.css">
     <script src = "https://code.jquery.com/jquery-3.4.1.min.js" type = "text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <style>
       .spacer {
         height: 100px;
@@ -22,7 +23,7 @@
 
 <body class = "p-3 mb-2 bg-light text-dark">
     
-    <header> {{> header}} </header>
+    {{> header}}
     
     <div class = "spacer"></div>
 
@@ -39,7 +40,7 @@
           </tr>
           <tr>
               <td>Username: </td>
-              <td><input type="text", id="username", name="uName"></td>
+              <td><input type="text", id="uName", name="uName"></td>
           </tr>
           <tr>
               <td>Password: </td>
@@ -93,6 +94,62 @@
     </div>
 
     <script type = "text/javascript">
+
+    /* A J A X */
+
+    $(document).ready(function () {
+
+		    /*
+		        attach the event `keyup` to the html element where id = `idNum`
+		        this html element is an `<input>` element
+		        this event activates when the user releases a key on the keyboard
+		    */
+		    $('#uName').keyup(function () {
+
+		        // get the value entered the user in the `<input>` element
+		        var uName = $('#uName').val();
+
+		        /*
+		            send an HTTP GET request using JQuery AJAX
+		            the first parameter is the path in our server
+		            which is defined in `../../routes/routes.js`
+		            the server will execute the function getCheckID()
+		            defined in `../../controllers/signupController.js`
+		            the second parameter passes the variable `idNum`
+		            as the value of the field `idNum`
+		            to the server
+		            the last parameter executes a callback function
+		            when the server sent a response
+		        */
+		        $.get('/getCheckID', {uName: uName}, function (result) {
+
+		            /*
+		                if the current value of idNum exists in the database
+		                change the background-color of the `<input>` element to red
+		                display an error message
+		                and disable the submit button
+		            */
+		            if(result.uName == uName) {
+		                $('#uName').css('background-color', 'red');
+		                $('#error').text('ID number already registered');
+		                $('#submit').prop('disabled', true);
+		            }
+
+		            /*
+		                else
+		                change the background-color of the `<input>` element back
+		                remove the error message
+		                and enable the submit button
+		            */
+		            else {
+		                $('#uName').css('background-color', '#E3E3E3');
+		                $('#error').text('');
+		                $('#submit').prop('disabled', false);
+		            }
+		        });
+		    });
+		});
+
       function checkField(field, bool) {
         var valid = bool;
         if(field.val() == '') {
