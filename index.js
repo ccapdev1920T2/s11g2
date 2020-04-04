@@ -1,5 +1,5 @@
 /*
-    LAST EDITED: APRIL 1, 2020
+    LAST EDITED: APRIL 4, 2020
     CCAPDEV S11 GROUP 2
     VIRTUS ET SCIENTIA
 */
@@ -8,32 +8,14 @@
 const express = require('express');
 const hbs = require('hbs');
 const db = require('./models/db.js');
+const routes = require('./routes/routes.js');
 
 /* Port */
 const app = express();
 const port = 3000;
 
-const routes = require('./routes/routes.js');
-
 /* View Engine */
 app.set('view engine', 'hbs');
-
-/* Routing */
-
-/* USER PAGE */
-app.get('/user', function(req, res) {
-    res.render('user');
-});
-
-/* BUILD PAGE */
-app.get('/build', function(req, res) {
-    res.render('build');
-});
-
-/* CONTACT PAGE */
-app.get('/contact', function(req, res) {
-    res.render('contact');
-});
 
 /* Functions */
 app.use(express.urlencoded({extended: true}));
@@ -41,8 +23,10 @@ app.use(express.urlencoded({extended: true}));
 /* ACCESS STATIC FILES */
 app.use(express.static('public'));
 
+/* ROUTING */
 app.use('/', routes);
 
+/* DATABASE */
 db.connect();
 
 /* 404 FILE NOT FOUND */
