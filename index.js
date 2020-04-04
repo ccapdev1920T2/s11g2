@@ -20,11 +20,6 @@ app.set('view engine', 'hbs');
 
 /* Routing */
 
-/* HOME PAGE */
-app.get('/', function(req, res) {
-    res.render('home');
-});
-
 /* USER PAGE */
 app.get('/user', function(req, res) {
     res.render('user');
@@ -38,11 +33,6 @@ app.get('/build', function(req, res) {
 /* CONTACT PAGE */
 app.get('/contact', function(req, res) {
     res.render('contact');
-});
-
-/* REGISTER PAGE */
-app.get('/register', function(req, res) {
-    res.render('register');
 });
 
 /* Functions */
