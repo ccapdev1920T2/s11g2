@@ -8,11 +8,6 @@
         <!-- Import CSS and JS -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
-        <!-- Slider CSS and JS -->
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="https://resources/demos/style.css">
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <!-- Script -->
         <script type="text/javascript">
             $(document).ready(function() {
@@ -50,6 +45,7 @@
                     }
                 });
                 //Slider-Function
+                /*
                 $(function() {
                     $("#slider-range").slider({
                         range: true,
@@ -62,6 +58,7 @@
                     });
                     $("#amount").val("$" + $("#slider-range").slider("values", 0) + " -$" + $("$slider-range").slider("values", 1));
                 });
+                */
             });
         </script>
         <!-- Style -->
@@ -228,18 +225,6 @@
                 <a href="/search/name"><button>List By Name</button></a>
                 <a href="/search/price"><button>List By Price</button></a>
                 <a href="/search/brand"><button>List By Brand</button></a>
-                <!-- Label for Price -->
-                <div class="center">
-                    <p>
-                        <label for="amount"> Price Range: </label>
-                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                    </p>
-                </div>
-                <!-- Slider Feature -->
-                <div class="container">
-                    <!-- From jQuery function -->
-                    <div id="slider-range"></div>
-                </div>
             </div>
             <!-- Car Listings -->
             <div id="carListContainer">
@@ -255,12 +240,12 @@
                             <!-- Attributes -->
                             <div class="carAtt">
                                 <!-- Will be replaced with icons eventually -->
-                                <p class="att"> <img height=50 widht=50 src="https://cdn.onlinewebfonts.com/svg/img_524811.png">: {{name}} </p>
-                                <p class="att"> <img height=50 width=50 src="https://pngimage.net/wp-content/uploads/2018/05/brand-icon-png-1.png">: {{brand}} </p>
-                                <p class="att"> <img height=50 width=50 src="https://cdn3.iconfinder.com/data/icons/automobile-icons/455/Search_For_Cars-512.png">: {{carClass}} </p>
-                                <p class="att"> <img height=50 width=50 src="https://i.ya-webdesign.com/images/car-icon-png.png">: {{bodyStyle}} </p>
-                                <p class="att"> <img height=50 width=50 src="https://image.flaticon.com/icons/png/512/9/9463.png">: {{capacity}} </p>
-                                <p class="att"> <img height=50 width=50 src="https://icons.iconarchive.com/icons/roundicons/100-free-solid/512/price-tag-icon.png">: ${{price}} </p>
+                                <p class="att"> <img height=30 width=30 src="https://cdn.onlinewebfonts.com/svg/img_524811.png">: {{name}} </p>
+                                <p class="att"> <img height=30 width=30 src="https://pngimage.net/wp-content/uploads/2018/05/brand-icon-png-1.png">: {{brand}} </p>
+                                <p class="att"> <img height=30 width=30 src="https://cdn3.iconfinder.com/data/icons/automobile-icons/455/Search_For_Cars-512.png">: {{carClass}} </p>
+                                <p class="att"> <img height=30 width=30 src="https://i.ya-webdesign.com/images/car-icon-png.png">: {{bodyStyle}} </p>
+                                <p class="att"> <img height=30 width=30 src="https://image.flaticon.com/icons/png/512/9/9463.png">: {{capacity}} </p>
+                                <p class="att"> <img height=30 width=30 src="https://icons.iconarchive.com/icons/roundicons/100-free-solid/512/price-tag-icon.png">: ${{price}} </p>
                                 <a href="/build/{{name}}"><button type="button" class="btn btn-success" id="order"> Build This Car </button> </a>
                             </div>
                         </div>
@@ -275,4 +260,3 @@
         </div>
     </body>
 </html>
-
