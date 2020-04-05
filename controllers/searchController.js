@@ -15,7 +15,49 @@ const searchController = {
 
         var query = {};
         var projection = {};
+        var mySort = {}
+
+
+        db.findMany(User, query, projection, function(result) {
+
+            if(result != null) {
+
+                res.render('search', {contents: result});
+            }
+
+            else {
+
+                res.render('error');
+            }
+        }, mySort);
+    },
+
+    getCarsByName: function (req, res) {
+
+        var query = {};
+        var projection = {};
         var mySort = {name: 1}
+
+
+        db.findMany(User, query, projection, function(result) {
+
+            if(result != null) {
+
+                res.render('search', {contents: result});
+            }
+
+            else {
+
+                res.render('error');
+            }
+        }, mySort);
+    },
+
+    getCarsByPrice: function (req, res) {
+
+        var query = {};
+        var projection = {};
+        var mySort = {price: 1}
 
 
         db.findMany(User, query, projection, function(result) {

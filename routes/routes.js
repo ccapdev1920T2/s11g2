@@ -30,6 +30,10 @@ app.post('/addcar', addcarController.postAddCar);
 
 app.get('/search', searchController.getCars);
 
+app.get('/search/name', searchController.getCarsByName);
+
+app.get('/search/price', searchController.getCarsByPrice);
+
 app.get('/', homeController.getHome);
 
 app.get('/home', homeController.getHome);
