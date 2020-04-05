@@ -201,6 +201,8 @@
                     <option value="4"> Sports </option>
                     <option value="5"> Truck </option>
                 </select>
+                <a href="/search/name"><button>Sort By Name</button></a>
+                <a href="/search/price"><button>Sort By Price</button></a>
             </div>
             <!-- Car Listings -->
             <div id="carListContainer">
@@ -222,7 +224,7 @@
                                 <p class="att"> Body Style: {{bodyStyle}} </p>
                                 <p class="att"> Capacity: {{capacity}} </p>
                                 <p class="att"> Price: ${{price}} </p>
-                                <a href="/build/{{name}}"><button type="button" class="btn btn-success" id="order"> Build This Car </a>
+                                <a href="/build/{{name}}"><button type="button" class="btn btn-success" id="order"> Build This Car </button> </a>
                             </div>
                         </div>
                         <!-- Right Side Capsule -->
