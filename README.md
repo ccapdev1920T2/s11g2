@@ -50,3 +50,4 @@ CCAPDEV S11 - Group 2: Virtus et Scientia
 1. UI Price Slider is not implemented (from the comments of Phase 1) in Phase 2. As a result, there are three options in the search page where the user can sort the cars by their name, brand or price.
 2. It's really important to note to ctrl + c once Command Prompt does not want to stop the add_data.js.
 3. The implementation of adding users is not yet implemented as some of the concepts needed are not yet discussed or approached. However, to add, delete and update the information of cars are implemented.
+4. As a result, registering and logging in is not yet possible until more concepts such as "express-session" is fully discussed.
