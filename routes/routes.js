@@ -40,6 +40,8 @@ app.get('/home', homeController.getHome);
 
 app.get('/register', registerController.getRegister);
 
+app.post('/register', registerController.postRegister);
+
 app.get('/getCheckID', registerController.getCheckID);
 
 app.get('/user/:uName', userController.getUser);

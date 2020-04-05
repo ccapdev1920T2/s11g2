@@ -64,7 +64,7 @@ const signupController = {
         // defined in `../routes/routes.js`
         // passing values using URL
         // which calls getSuccess() method defined in `./successController.js`
-        res.redirect('/success?fName=' + fName +'&lName=' + lName + '&uName=' + uName);
+        res.redirect('/user/' + uName);
     },
 
 
