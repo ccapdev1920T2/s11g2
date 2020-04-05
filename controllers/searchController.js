@@ -15,6 +15,7 @@ const searchController = {
 
         var query = {};
         var projection = {};
+        var mySort = {name: 1}
 
 
         db.findMany(User, query, projection, function(result) {
@@ -28,7 +29,7 @@ const searchController = {
 
                 res.render('error');
             }
-        });
+        }, mySort);
     }
 }
 

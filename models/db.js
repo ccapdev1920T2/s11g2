@@ -67,11 +67,11 @@ const database = {
         limits the fields returned based on the string `projection`
         callback function is called after the execution of findMany() function
     */
-    findMany: function(model, query, projection, callback) {
+    findMany: function(model, query, projection, callback, mySort) {
         model.find(query, projection, function(error, result) {
             if(error) throw error;
             return callback(result);
-        });
+        }).sort(mySort);
     },
 
     /*
