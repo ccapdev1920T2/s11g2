@@ -14,6 +14,12 @@ Each folder in the repository has its own function to make the project run prope
 - add_data.js - This script creates the database and insert data and admin.
 - index.js - The main entry point of the web application.
 
+## Pre-requisites
+
+You will need the following
+1. Node.js
+2. MongoDB Community Server
+
 ## Getting Started
 
 1. Clone the repository either by downloading the contents of the repository, or using the
@@ -38,6 +44,16 @@ http://localhost:3000/
 8. You will be directed in the home page.
 9. If you are in the home page, congratulations! That means that the server is running. Roam around the web application to view the different features. 
 
+## More Info
+
+In an unlikely event that there is no such thing as package.json and package-lock.json, you will have to run some commands.
+1. Run the command `npm install express --save` to add the necessary package for express.
+2. Run the command `npm install hbs` to add the necessary package for handlebars.
+3. Run the command `npm install mongodb --save` to add the necessary package for MongoDB.
+4. Run the command `npm install mongoose --save` to add the necessary package for Mongoose.
+
+Note: Do run `npm audit fix` if there is a low severity due to pollution protocol of hbs.
+
 ## Authors
 
 CCAPDEV S11 - Group 2: Virtus et Scientia
@@ -51,3 +67,4 @@ CCAPDEV S11 - Group 2: Virtus et Scientia
 2. It's really important to note to ctrl + c once Command Prompt does not want to stop the add_data.js.
 3. The implementation of adding users is not yet implemented as some of the concepts needed are not yet discussed or approached. However, to add, delete and update the information of cars are implemented.
 4. As a result, registering and logging in is not yet possible until more concepts such as "express-session" is fully discussed.
+5. The updated Pre-Phase 2 UML document is in the repository.
