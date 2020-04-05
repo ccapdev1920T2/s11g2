@@ -43,7 +43,7 @@ http://localhost:3000/
 CCAPDEV S11 - Group 2: Virtus et Scientia
 - Delima Jr., Reynaldo K. (rdj519)
 - Jatico II, Nilo Cantil K. (Gridmerc)
-- Valera, Luis Angelo DLC. (luigi-ravioli)
+- Valera, Luis Angelo D.C. (luigi-ravioli)
 
 ## Notes
 
