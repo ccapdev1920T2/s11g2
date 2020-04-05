@@ -34,6 +34,8 @@ app.get('/search/name', searchController.getCarsByName);
 
 app.get('/search/price', searchController.getCarsByPrice);
 
+app.get('/search/brand', searchController.getCarsByBrand);
+
 app.get('/', homeController.getHome);
 
 app.get('/home', homeController.getHome);
