@@ -66,10 +66,9 @@
       }
         
       body {
-          background-image: url("https://ccsanangelo.org/wp-content/uploads/2016/12/simple-background-color-has-web-page-background-color.jpg");
+          background-image: url("https://www.solidbackgrounds.com/images/1920x1080/1920x1080-dark-pastel-blue-solid-color-background.jpg");
           background-size: cover;
           background-position: center;
-          background-repeat: no-repeat;
       }
     </style>
     
@@ -110,9 +109,9 @@
             <button id = "submit" class = "btn btn-primary"> Submit </button><br>
 
             {{#if_eq uName "admin"}}
-              <button><a href="/addcar">Add a Car</a></button>
-              <button><a href="/chooseUpdate">Update a Car</a></button>
-              <button><a href="/delete">Delete a Car</a></button>
+              <a href="/addcar"><button>Add a Car</button></a>
+              <a href="/chooseUpdate"><button>Update a Car</button></a>
+              <a href="/delete"><button>Delete a Car</button></a>
             {{/if_eq}}
           </div>
         </div>
