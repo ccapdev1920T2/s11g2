@@ -22,6 +22,7 @@ const addcarController = {
         var price = req.body.price;
         var description = req.body.desc;
         var imgLink = req.body.img;
+        var optionImg = req.body.optionImg;
 
         db.insertOne(Car, {
             name: name,
@@ -31,7 +32,8 @@ const addcarController = {
             capacity: capacity,
             price: price,
             description: description,
-            imgLink: imgLink
+            imgLink: imgLink,
+            optionImg: optionImg
         });
 
     }
