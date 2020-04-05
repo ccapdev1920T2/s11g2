@@ -8,6 +8,11 @@
         <!-- Import CSS and JS -->
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="text/javascript"></script>
+        <!-- Slider CSS and JS -->
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <!-- Script -->
         <script type="text/javascript">
             $(document).ready(function() {
@@ -43,6 +48,19 @@
                         $(".Sports").hide();
                         $(".Truck").show();
                     }
+                });
+                //Slider-Function
+                $(function() {
+                    $("#slider-range").slider({
+                        range: true,
+                        min: 0,
+                        max: 500,
+                        values: [75,300],
+                        slide: function(event, ui) {
+                            $("#amount").val("$" + ui.values[0] + " - $" + ui.values[1]);
+                        }
+                    });
+                    $("#amount").val("$" + $("#slider-range").slider("values", 0) + " -$" + $("$slider-range").slider("values", 1));
                 });
             });
         </script>
@@ -159,6 +177,10 @@
                 overflow-wrap: break-word;
                 font-size: 20px;
             }
+            /* Class: center */
+            .center{
+                text-align: center;
+            }
             /* Header */
             h1{
                 font-family: sans-serif;
@@ -205,6 +227,18 @@
                 </select>
                 <a href="/search/name"><button>Sort By Name</button></a>
                 <a href="/search/price"><button>Sort By Price</button></a>
+                <!-- Label for Price -->
+                <div class="center">
+                    <p>
+                        <label for="amount"> Price Range: </label>
+                        <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    </p>
+                </div>
+                <!-- Slider Feature -->
+                <div class="container">
+                    <!-- From jQuery function -->
+                    <div id="slider-range"></div>
+                </div>
             </div>
             <!-- Car Listings -->
             <div id="carListContainer">
