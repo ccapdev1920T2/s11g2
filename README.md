@@ -4,6 +4,16 @@ The repository is submitted for the partial fulfillment of CCAPDEV course. The t
 
 ## Contents
 
+Each folder in the repository has its own function to make the project run properly.
+
+- controllers - This folder contains files which defines the callback function for a given client request.
+- models - This folder contains files for database modelling and access.
+- public - This folder contains static files such as css and js. (Note: all img files are used via url)
+- routes - This folder contains files which describes the response of the server for each HTTP method request to a specific path in the server.
+- views - This folder contains all hbs files (including partials) to be rendered when requested from the server.
+- add_data.js - This script creates the database and insert data and admin.
+- index.js - The main entry point of the web application.
+
 ## Getting Started
 
 1. Clone the repository either by downloading the contents of the repository, or using the
@@ -31,9 +41,9 @@ http://localhost:3000/
 ## Authors
 
 CCAPDEV S11 - Group 2: Virtus et Scientia
-- Delima Jr., Reynaldo K.
-- Jatico II, Nilo Cantil K.
-- Valera, Luis Angelo DLC.
+- Delima Jr., Reynaldo K. (rdj519)
+- Jatico II, Nilo Cantil K. (Gridmerc)
+- Valera, Luis Angelo DLC. (luigi-ravioli)
 
 ## Notes
 
