@@ -28,67 +28,104 @@
     
     <div class = "spacer"></div>
 
-    <div class = "container">
+    <div class = "container rounded-lg p-3 mb-2 bg-light text-dark">
         <form id="signup" method="post">
+          <div class='form-group'>
+
+            <label for="fname">First Name: </label> 
+            <input class="form-control" type="text" id="fname" name="fname"> 
+            <small class="form-text text-muted" id="fnameError">{{fnameError}}</small> 
+
+          </div>
+
+          <div class='form-group'>
             
-          <label for="fname">First Name: </label>
-          <input type="text" id="fname" name="fname"> <br>
-          <p id="fnameError">{{fnameError}}</p> <br>
-      
-      
-          <label for="lname">Last Name: </label>
-          <input type="text" id="lname" name="lname"> <br>
-          <p id="lnameError">{{lnameError}}</p> <br>
-      
-      
-          <label for="username">Username: </label>
-          <input type="text" id="username" name="username"><br>
-          <p id="usernameError">{{usernameError}}</p> <br>
-      
-      
-          <label for="pw">Password: </label>
-          <input type="password" id="pw" name="pw"> <br>
-          <p id="pwError">{{pwError}}</p> <br>
-      
-          <label for="email">Email: </label>
-          <input type="text" id="email" name="email"> <br>
-          <p id="emailError">{{emailError}}</p> <br>
-      
-      
-          <label for="bDay">Birthday: </label>
-          <input type="date" id="bday" name="bDay"> <br> <br>
-      
-      
-          <label for="ccNo">Credit Card Number: </label>
-          <input size="16" maxlength="16" type="text" id="ccNo" name="ccNo"> <br>
-          <p id="ccNoError">{{ccNoError}}</p> <br>
-      
-      
-          <label for="ccExp">Credit Card Expiration Date: </label>
-          <input size="5" maxlength="4" type="text" id="ccExp" name="ccExp"> <br>
-          <p id="ccExpError">{{ccExpError}}</p> <br>
-      
-      
-          <label for="ccPin">Credit Card PIN: </label>
-          <input size="4" maxlength="3" type="text" id="ccPin" name="ccPin"> <br>
-          <p id="ccPinError">{{ccPinError}}</p> <br>
-      
-      
-          <label for="dlNo">Driver's License Number: </label>
-          <input type = "text" id = "dlNo" name="dlNo"> <br>
-          <p id="dlNoError">{{dlNoError}}</p> <br>
-      
-      
-          <label for="dlStart">Driver's License Issue Date: </label>
-          <input type = "date" id = "dlStart" name="dlStart"> <br> <br>
-      
-      
-          <label for="dlExp">Driver's License Expiry Date: </label>
-          <input type = "date" id = "dlExp" name="dlExp"> <br> <br>
-          <input type="submit" id="submit" class="btn btn-primary" value="SUBMIT">
+            <label for="lname">Last Name: </label> 
+            <input class="form-control" type="text" id="lname" name="lname"> 
+            <small class="form-text text-muted" id="lnameError">{{lnameError}}</small> 
 
+          </div>
+
+          <div class='form-group'>
+            
+            <label for="username">Username: </label> 
+            <input class="form-control" type="text" id="username" name="username">
+            <small class="form-text text-muted" id="usernameError">{{usernameError}}</small> 
+
+          </div>
+
+          <div class='form-group'>
+
+            <label for="pw">Password: </label> 
+            <input class="form-control" type="password" id="pw" name="pw"> 
+            <small class="form-text text-muted" id="pwError">{{pwError}}</small> 
+            
+          </div>
+
+          <div class='form-group'>
+
+            <label for="email">Email: </label> 
+            <input class="form-control" type="text" id="email" name="email"> 
+            <small class="form-text text-muted" id="emailError">{{emailError}}</small> 
+            
+          </div>
+
+          <div class='form-group'>
+            
+            <label for="bDay">Birthday: </label> 
+            <input class="form-control" type="date" id="bday" name="bDay">  
+
+          </div>
+
+          <div class='form-group'>
+            
+            <label for="ccNo">Credit Card Number: </label> 
+            <input class="form-control" size="16" maxlength="16" type="text" id="ccNo" name="ccNo"> 
+            <small class="form-text text-muted" id="ccNoError">{{ccNoError}}</small> 
+
+          </div>
+
+          <div class='form-group'>
+            
+            <label for="ccExp">Credit Card Expiration Date: </label> 
+            <input class="form-control" size="5" maxlength="4" type="text" id="ccExp" name="ccExp"> 
+            <small class="form-text text-muted" id="ccExpError">{{ccExpError}}</small> 
+
+          </div>
+
+          <div class='form-group'>
+            
+            <label for="ccPin">Credit Card PIN: </label> 
+            <input class="form-control" size="4" maxlength="3" type="text" id="ccPin" name="ccPin"> 
+            <small class="form-text text-muted" id="ccPinError">{{ccPinError}}</small> 
+
+          </div>
+
+          <div class='form-group'>
+            
+            <label for="dlNo">Driver's License Number: </label> 
+            <input class="form-control" type = "text" id = "dlNo" name="dlNo"> 
+            <small class="form-text text-muted" id="dlNoError">{{dlNoError}}</small> 
+
+          </div>
+
+          <div class='form-group'>
+            
+            <label for="dlStart">Driver's License Issue Date: </label> 
+            <input class="form-control" type = "date" id = "dlStart" name="dlStart">  
+
+          </div>
+
+          <div class='form-group'>
+            
+            <label for="dlExp">Driver's License Expiry Date: </label> 
+            <input class="form-control" type = "date" id = "dlExp" name="dlExp">  
+
+          </div>
+
+          <input type="submit" id="submit" class="btn btn-primary btn-lg btn-block" value="Submit">
+          
         </form>
-
     </div>
   </body>
 </html>
