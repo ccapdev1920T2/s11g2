@@ -22,6 +22,8 @@ const updateController = require('../controllers/updateController.js');
 
 const chooseUpdateController = require('../controllers/chooseUpdateController.js');
 
+const validation = require('../helpers/validation.js');
+
 const app = express();
 
 app.get('/addcar', addcarController.getAddCar);
@@ -42,9 +44,9 @@ app.get('/home', homeController.getHome);
 
 app.get('/register', registerController.getRegister);
 
-app.post('/register', registerController.postRegister);
+app.post('/register', validation.registerValidation(),  registerController.postRegister);
 
-app.get('/getCheckID', registerController.getCheckID);
+app.get('/getCheckUsername', registerController.getCheckUsername);
 
 app.get('/user/:uName', userController.getUser);
 
