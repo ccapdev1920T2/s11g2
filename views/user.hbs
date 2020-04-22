@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title> User: {{uName}} </title>
+    <title>{{uName}}'s Profile </title>
     <link rel = "stylesheet" type = "text/css" href = "/css/bootstrap.css">
     <script src = "https://code.jquery.com/jquery-3.4.1.min.js" type = "text/javascript">
       /* INSERT CODE HERE */
@@ -75,49 +75,47 @@
     
 </head>
 
-<body>
+<body class="p-3 mb-2 bg-light text-dark">
     
-  <header {{> header}} </header>
+  {{> header}}
 
-    <div class="spacer">
+  <div class="spacer">
+  </div>
+
+  <div class="container rounded-lg p-3 mb-2 bg-light text-dark">
+
+      <div class = "jumbotron">
+    
+      {{!-- <p id = "favoriteCar"></p>
+      <label for = "favorite"> What is your favorite car?: </label>
+      <input type = "text" id = "favorite" name = "favorite">
+      <button id = "submit" class = "btn btn-primary"> Submit </button><br> --}}
+
+      {{#if_eq uName "admin"}}
+
+        <h1 class="display-4">Admin</h1>
+
+        <hr class="my-4">
+
+        <a class="btn btn-primary btn-lg" href="/addcar" role="button">Add a Car</a>
+        <a class="btn btn-primary btn-lg" href="/chooseUpdate" role="button">Update a Car</a>
+        <a class="btn btn-primary btn-lg" href="/delete" role="button">Delete a Car</a>
+
+      {{else}}
+
+        <h1 class="display-4">{{fName}} {{lName}}</h1>
+        <small class="text-muted">{{uName}}</small>
+
+        <hr class="my-4">
+
+        <p class="lead">Birthday: {{bDay}}</p>
+        <p class="lead">Email: {{email}}</p>
+
+      {{/if_eq}}
+          
     </div>
-
-    <div class = "container">
-      <div class = "card">
-        <div class = "capsule">
-          <div class = "capsuleLeft">
-            <div class = "profile">
-              <img class = "profilePicture" src = "https://scontent.fmnl4-1.fna.fbcdn.net/v/t31.0-8/s960x960/25073221_1774868472533140_8438047959028331544_o.jpg?_nc_cat=103&_nc_ohc=jrIEEGTw9IEAX8yx4rj&_nc_ht=scontent.fmnl4-1.fna&_nc_tp=7&oh=f55232d24d070316737d321bddb8dc0d&oe=5EFF63FB" alt = "userImg">
-            </div>
-          </div>
-          <div class = "capsuleRight">
-            <p>
-              Username: {{uName}}
-            </p>
-            <p>
-              Name: {{fName}} {{lName}}
-            </p>
-            <p>
-              Email: {{email}}
-            </p>
-            <p>
-              Birthday: {{bDay}}
-            </p>
-            
-            <p id = "favoriteCar"></p>
-            <label for = "favorite"> What is your favorite car?: </label>
-            <input type = "text" id = "favorite" name = "favorite">
-            <button id = "submit" class = "btn btn-primary"> Submit </button><br>
-
-            {{#if_eq uName "admin"}}
-              <a href="/addcar"><button>Add a Car</button></a>
-              <a href="/chooseUpdate"><button>Update a Car</button></a>
-              <a href="/delete"><button>Delete a Car</button></a>
-            {{/if_eq}}
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
+  
 
     <script type = "text/javascript">
       $("#submit").click(function() {

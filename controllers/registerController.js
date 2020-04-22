@@ -4,6 +4,9 @@ const db = require('../models/db.js');
 
 const { validationResult } = require('express-validator');
 
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
+
 // import module `User` from `../models/UserModel.js`
 const User = require('../models/UserModel.js');
 
@@ -61,40 +64,43 @@ const signupController = {
             var startDate = req.body.dlStart;
             var expDate = req.body.dlExp;
 
-            var user = {
+            bcrypt.hash(pw, saltRounds, function(err, hash) {
 
-                fName: fName,
-                lName: lName,
-                uName: uName,
-                pw: pw,
-                email: email,
-                bDay: bDay,
-                //credit card
-                ccNo: ccNo,
-                ccExp: ccExp,
-                ccPin: ccPin,
-                //license
-                fileId: fileId,
-                startDate: startDate,
-                expDate: expDate
+                var user = {
 
-            }
-
-            // calls the function insertOne()
-            // defined in the `database` object in `../models/db.js`
-            // this function adds a document to collection `users`
-            db.insertOne(User, user, function(flag) {
-
-                if (flag) {
-
-                    // upon adding a user to the database,
-                    // redirects the client to `/success` using HTTP GET,
-                    // defined in `../routes/routes.js`
-                    // passing values using URL
-                    // which calls getSuccess() method defined in `./successController.js`
-                    res.redirect('/user/' + uName);
-
+                    fName: fName,
+                    lName: lName,
+                    uName: uName,
+                    pw: hash,
+                    email: email,
+                    bDay: bDay,
+                    //credit card
+                    ccNo: ccNo,
+                    ccExp: ccExp,
+                    ccPin: ccPin,
+                    //license
+                    fileId: fileId,
+                    startDate: startDate,
+                    expDate: expDate
+    
                 }
+    
+                // calls the function insertOne()
+                // defined in the `database` object in `../models/db.js`
+                // this function adds a document to collection `users`
+                db.insertOne(User, user, function(flag) {
+    
+                    if (flag) {
+    
+                        // upon adding a user to the database,
+                        // redirects the client to `/success` using HTTP GET,
+                        // defined in `../routes/routes.js`
+                        // passing values using URL
+                        // which calls getSuccess() method defined in `./successController.js`
+                        res.redirect('/user/' + uName);
+    
+                    }
+                });
             });
         }
     },
