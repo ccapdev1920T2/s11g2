@@ -7,7 +7,7 @@ const User = require('./UserModel.js');
 const Car = require('./CarModel.js');
 
 // ccapdev-mongoose is the name of the database
-const url = 'mongodb://localhost:27017/ccapdev-mongoose';
+const url = 'mongodb://localhost:27017/s11g2';
 
 // additional connection options
 const options = {
