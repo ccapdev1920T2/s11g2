@@ -22,7 +22,7 @@ const logoutController = {
                 redirects the client to `/profile` using HTTP GET,
                 defined in `../routes/routes.js`
             */
-            res.redirect('/');
+            res.redirect('/home');
         });
 
     }

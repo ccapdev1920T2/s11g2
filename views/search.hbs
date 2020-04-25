@@ -207,7 +207,7 @@
     </head>
     <body>
         <!-- Header HBS -->
-        <header> {{> header flag=flag uName=uName}} </header>
+        <header>{{#with contents}} {{> header flag=flag uName=uName}} {{/with}}</header>
         <!-- Space -->
         <div class="spacer"></div>
         <!-- Search Area -->
