@@ -53,6 +53,10 @@ app.get('/addcar', addcarController.getAddCar);
 
 app.post('/addcar', validation.addCarValidation(), addcarController.postAddCar);
 
+app.get('/update/:name', updateController.getUpdate);
+
+app.post('/update/:name', validation.updateCarValidation(), updateController.postUpdate);
+
 app.get('/getCheckUsername', registerController.getCheckUsername);
 
 app.get('/user/:uName', userController.getUser);
@@ -64,10 +68,6 @@ app.get('/contact', contactController.getContact);
 app.get('/delete', deleteController.getDelete);
 
 app.post('/delete', deleteController.postDelete);
-
-app.get('/update/:name', updateController.getUpdate);
-
-app.post('/update/:name', updateController.postUpdate);
 
 app.get('/chooseUpdate', chooseUpdateController.getChoose);
 
