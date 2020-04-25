@@ -4,23 +4,23 @@ $(document).ready(function () {
 
         var name = validator.trim($('#name').val());
         var brand = validator.trim($('#brand').val());
-        var bodystyle = validator.trim($('#bodystle').val());
+        var bodyStyle = validator.trim($('#bodyStyle').val());
         var capacity = validator.trim($('#capacity').val());
         var price = validator.trim($('#price').val());
-        var desc = validator.trim($('#desc').val());
-        var img = validator.trim($('#desc').val());
-        var optionimg = validator.trim($('#optionimg').val());
+        var description = validator.trim($('#description').val());
+        var imgLink = validator.trim($('#imgLink').val());
+        var optionImg = validator.trim($('#optionImg').val());
 
         var nameEmpty = validator.isEmpty(name);
         var brandEmpty = validator.isEmpty(brand);
-        var bodystyleEmpty = validator.isEmpty(bodystyle);
+        var bodyStyleEmpty = validator.isEmpty(bodyStyle);
         var capacityEmpty = validator.isEmpty(capacity);
         var priceEmpty = validator.isEmpty(price);
-        var descEmpty = validator.isEmpty(desc);
-        var imgEmpty = validator.isEmpty(img);
-        var optionimgEmpty = validator.isEmpty(optionimg);
+        var descriptionEmpty = validator.isEmpty(description);
+        var imgLinkEmpty = validator.isEmpty(imgLink);
+        var optionImgEmpty = validator.isEmpty(optionImg);
 
-        return !nameEmpty && !brandEmpty && !bodystyleEmpty && !capacityEmpty && !priceEmpty && !descEmpty && !imgEmpty && !optionimgEmpty;
+        return !nameEmpty && !brandEmpty && !bodyStyleEmpty && !capacityEmpty && !priceEmpty && !descriptionEmpty && !imgLinkEmpty && !optionImgEmpty;
     }
 
     function validateField(field, fieldName, error) {
@@ -71,9 +71,9 @@ $(document).ready(function () {
         
     });
 
-    $('#bodystyle').keyup(function () {
+    $('#bodyStyle').keyup(function () {
 
-        validateField($('#bodystyle'), 'Bodystyle', $('#bodystyleError'));
+        validateField($('#bodyStyle'), 'Bodystyle', $('#bodyStyleError'));
         
     });
 
@@ -89,21 +89,21 @@ $(document).ready(function () {
         
     });
 
-    $('#desc').keyup(function () {
+    $('#description').keyup(function () {
 
-        validateField($('#desc'), 'Description', $('#descError'));
+        validateField($('#description'), 'Description', $('#descriptionError'));
         
     });
 
-    $('#img').keyup(function () {
+    $('#imgLink').keyup(function () {
 
-        validateField($('#img'), 'Image URL', $('#imgError'));
+        validateField($('#imgLink'), 'Image URL', $('#imgLinkError'));
         
     });
 
-    $('#optionimg').keyup(function () {
+    $('#optionImg').keyup(function () {
 
-        validateField($('#optionimg'), 'Image URL', $('#optionimgError'));
+        validateField($('#optionImg'), 'Image URL', $('#optionImgError'));
         
     });
 });
