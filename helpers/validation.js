@@ -20,6 +20,8 @@ const validation = {
 
             check('ccNo', 'Credit Card Numbers should not be empty.').notEmpty(),
 
+            check('ccNo', 'Please enter numbers only').isDecimal(),
+
             check('ccExp', 'Credit Card Expiry Date should not be empty.').notEmpty(),
 
             check('ccPin', 'Credit Card PIN should not be empty.').notEmpty(),
