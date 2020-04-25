@@ -54,7 +54,16 @@ const addcarController = {
             description: description,
             imgLink: imgLink,
             optionImg: optionImg
+        }, function(flag) {
+
+            if(flag) {
+
+                res.redirect('/user/' + req.session.uName);
+
+            }
         });
+
+        
 
     }
 

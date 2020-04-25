@@ -84,7 +84,14 @@ const updateController = {
             optionImg: req.body.optionImg
         }
 
-        db.updateOne(Car, filter, update);
+        db.updateOne(Car, filter, update, function(flag) {
+
+            if(flag) {
+
+                res.redirect('/user/' + req.session.uName);
+
+            }
+        });
     }
 }
 

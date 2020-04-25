@@ -40,9 +40,16 @@ const deleteController = {
 
     postDelete: function (req, res) {
 
-        db.deleteOne(Car, {name: req.body.cars});
-    }
+        db.deleteOne(Car, {name: req.body.cars}, function(flag) {
 
+            if (flag) {
+
+                res.redirect('/user/' + req.session.uName);
+
+            }
+        });
+        
+    }
 }
 
 module.exports = deleteController;

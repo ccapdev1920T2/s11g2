@@ -117,7 +117,7 @@ const signupController = {
                         // defined in `../routes/routes.js`
                         // passing values using URL
                         // which calls getSuccess() method defined in `./successController.js`
-                        res.redirect('/user/' + uName);
+                        res.redirect('/user/' + user.uName);
     
                     }
                 });
