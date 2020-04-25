@@ -26,7 +26,8 @@ const updateController = {
                     capacity: result.capacity,
                     price: result.price,
                     description: result.description,
-                    imgLink: result.imgLink
+                    imgLink: result.imgLink,
+                    optionImg: result.optionImg
                 }
 
                 res.render('update', details);
@@ -52,7 +53,8 @@ const updateController = {
             capacity: req.body.capacity,
             price: req.body.price,
             description: req.body.desc,
-            imgLink: req.body.img
+            imgLink: req.body.img,
+            optionImg: req.body.optionImg
         }
 
         db.updateOne(Car, filter, update);
