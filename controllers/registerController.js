@@ -117,6 +117,9 @@ const signupController = {
                         // defined in `../routes/routes.js`
                         // passing values using URL
                         // which calls getSuccess() method defined in `./successController.js`
+
+                        req.session.uName = user.uName;
+                        
                         res.redirect('/user/' + user.uName);
     
                     }
