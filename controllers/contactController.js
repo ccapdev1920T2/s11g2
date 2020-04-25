@@ -10,7 +10,26 @@ const contactController = {
     // as defined in `../routes/routes.js`
     getContact: function (req, res) {
 
-        res.render('contact');
+        if(req.session.uName) {
+
+            var details = {
+
+                flag: true,
+                uName: req.session.uName
+
+            }
+        }
+
+        else {
+
+            var details = {
+
+                flag: false
+
+            }
+        }
+
+        res.render('contact', details);
     }
 }
 

@@ -13,6 +13,25 @@ const userController = {
     // as defined in `../routes/routes.js`
     getUser: function (req, res) {
 
+        if(req.session.uName) {
+
+            var details = {
+
+                flag: true,
+                uName: req.session.uName
+
+            }
+        }
+
+        else {
+
+            var details = {
+
+                flag: false
+
+            }
+        }
+
         // query where `idNum` is equal to URL parameter `idNum`
         var query = {uName: req.params.uName};
 
@@ -32,13 +51,12 @@ const userController = {
             // if the user exists in the database
             // render the profile page with their details
             if(result != null) {
-                var details = {
-                    fName: result.fName,
-                    lName: result.lName,
-                    uName: result.uName,
-                    email: result.email,
-                    bDay: result.bDay,
-                };
+
+                details.fName = result.fName;
+                details.lName = result.lName;
+                details.uuName = result.uName;
+                details.email = result.email;
+                details.bDay = result.bDay;
 
                 // render `../views/profile.hbs`
                 res.render('user', details);

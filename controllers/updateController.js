@@ -18,19 +18,46 @@ const updateController = {
 
             if(result != null) {
 
-                var details = {
-                    name: result.name,
-                    brand: result.brand,
-                    carClass: result.carClass,
-                    bodyStyle: result.bodyStyle,
-                    capacity: result.capacity,
-                    price: result.price,
-                    description: result.description,
-                    imgLink: result.imgLink,
-                    optionImg: result.optionImg
+                if(req.session.uName) {
+
+                    var car = {
+                        name: result.name,
+                        brand: result.brand,
+                        carClass: result.carClass,
+                        bodyStyle: result.bodyStyle,
+                        capacity: result.capacity,
+                        price: result.price,
+                        description: result.description,
+                        imgLink: result.imgLink,
+                        optionImg: result.optionImg
+                    }
+
+                    car.flag = true;
+                    car.uName = req.session.uName;
+
                 }
 
-                res.render('update', details);
+                else{
+
+                    var car = {
+                        name: result.name,
+                        brand: result.brand,
+                        carClass: result.carClass,
+                        bodyStyle: result.bodyStyle,
+                        capacity: result.capacity,
+                        price: result.price,
+                        description: result.description,
+                        imgLink: result.imgLink,
+                        optionImg: result.optionImg
+                    }
+
+                    car.flag = false;
+
+                }
+
+                
+
+                res.render('update', car);
             }
 
             else {

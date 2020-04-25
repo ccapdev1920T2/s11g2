@@ -17,7 +17,27 @@ const signupController = {
     // executed when the client sends an HTTP GET request `/signup`
     // as defined in `../routes/routes.js`
     getRegister: function (req, res) {
-        res.render('register');
+
+        if(req.session.uName) {
+
+            var details = {
+
+                flag: true,
+                uName: req.session.uName
+
+            }
+        }
+
+        else {
+
+            var details = {
+
+                flag: false
+
+            }
+        }
+
+        res.render('register', details);
     },
 
     // executed when the client sends an HTTP POST request `/signup`

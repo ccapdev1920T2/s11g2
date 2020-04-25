@@ -22,6 +22,19 @@ const searchController = {
 
             if(result != null) {
 
+                if(req.session.uName) {
+
+                    result.flag = true;
+                    result.uName = req.session.uName;
+
+                }
+
+                else{
+
+                    result.flag = false;
+
+                }
+
                 res.render('search', {contents: result});
             }
 
@@ -42,6 +55,19 @@ const searchController = {
         db.findMany(User, query, projection, function(result) {
 
             if(result != null) {
+
+                if(req.session.uName) {
+
+                    result.flag = true;
+                    result.uName = req.session.uName;
+
+                }
+
+                else{
+
+                    result.flag = false;
+
+                }
 
                 res.render('search', {contents: result});
             }
@@ -64,6 +90,19 @@ const searchController = {
 
             if(result != null) {
 
+                if(req.session.uName) {
+
+                    result.flag = true;
+                    result.uName = req.session.uName;
+
+                }
+
+                else{
+
+                    result.flag = false;
+
+                }
+
                 res.render('search', {contents: result});
             }
 
@@ -84,6 +123,19 @@ const searchController = {
         db.findMany(User, query, projection, function(result) {
 
             if(result != null) {
+
+                if(req.session.uName) {
+
+                    result.flag = true;
+                    result.uName = req.session.uName;
+
+                }
+
+                else{
+
+                    result.flag = false;
+
+                }
 
                 res.render('search', {contents: result});
             }

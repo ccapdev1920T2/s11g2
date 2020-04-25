@@ -7,6 +7,25 @@ const successController = {
     // as defined in `../routes/routes.js`
     getSuccess: function (req, res) {
 
+        if(req.session.uName) {
+
+            var details = {
+
+                flag: true,
+                uName: req.session.uName
+
+            }
+        }
+
+        else {
+
+            var details = {
+
+                flag: false
+
+            }
+        }
+
         // when passing values using HTTP GET method
         // the values are stored in the req.query object
         // Example url: `http://localhost/success?fName=A&lName=B&uName=123`

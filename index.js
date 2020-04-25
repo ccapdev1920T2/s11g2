@@ -7,6 +7,9 @@
 /* Import Modules Here */
 const express = require('express');
 const hbs = require('hbs');
+const session = require('express-session');
+const mongoose = require('mongoose');
+const MongoStore = require('connect-mongo')(session);
 const db = require('./models/db.js');
 const routes = require('./routes/routes.js');
 
@@ -23,6 +26,13 @@ app.use(express.urlencoded({extended: true}));
 /* ACCESS STATIC FILES */
 app.use(express.static('public'));
 
+app.use(session({
+    'secret': 'ccapdev-session',
+    'resave': false,
+    'saveUninitialized': false,
+    store: new MongoStore({mongooseConnection: mongoose.connection})
+}));
+
 /* ROUTING */
 app.use('/', routes);
 
@@ -31,7 +41,27 @@ db.connect();
 
 /* 404 FILE NOT FOUND */
 app.use(function(req, res, next) {
-    res.status(404).send('File is not in the server!');
+    var details = {};
+
+    /*
+        checks if a user is logged-in by checking the session data
+        if a user is logged-in,
+        display the profile tab and logout tab in the nav bar.
+    */
+   
+    if(req.session.uName) {
+        details.flag = true;
+        details.uName = req.session.uName;
+    }
+
+    /*
+        if no user is logged-in,
+        do not display the profile tab and the logout tab in the nav bar.
+    */
+    else
+        details.flag = false;
+
+        res.render('home', details);
 });
 
 /* PARTIALS */

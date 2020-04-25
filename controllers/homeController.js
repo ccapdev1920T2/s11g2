@@ -14,7 +14,27 @@ const homeController = {
     // as defined in `../routes/routes.js`
     getHome: function (req, res) {
 
-        res.render('home');
+        if(req.session.uName) {
+
+            var details = {
+
+                flag: true,
+                uName: req.session.uName
+
+            }
+        }
+
+        else {
+
+            var details = {
+
+                flag: false
+
+            }
+        }
+        
+        res.render('home', details);
+        
     },
 
     postLogin: function(req, res) {
@@ -38,13 +58,15 @@ const homeController = {
 
                     if(equal) {
 
+                        req.session.uName = user.uName;
+
                         res.redirect('/user/' + user.uName);
 
                     }
 
                     else {
 
-                        var details = {error: 'ID Number and/or Password is incorrect.'};
+                        var details = {flag: false, error: 'ID Number and/or Password is incorrect.'};
                         res.render('home', details);
 
                     }
@@ -53,7 +75,7 @@ const homeController = {
 
             else {
 
-                var details = {error: 'ID Number and/or Password is incorrect.'};
+                var details = {flag: false, error: 'ID Number and/or Password is incorrect.'};
                 res.render('home', details);
 
             }

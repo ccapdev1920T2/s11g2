@@ -9,7 +9,27 @@ const addcarController = {
 
 
     getAddCar: function (req, res) {
-        res.render('addcar');
+
+        if(req.session.uName) {
+
+            var details = {
+
+                flag: true,
+                uName: req.session.uName
+
+            }
+        }
+
+        else {
+
+            var details = {
+
+                flag: false
+
+            }
+        }
+
+        res.render('addcar', details);
     },
 
     postAddCar: function (req, res) {

@@ -22,6 +22,8 @@ const updateController = require('../controllers/updateController.js');
 
 const chooseUpdateController = require('../controllers/chooseUpdateController.js');
 
+const logoutController = require('../controllers/logoutController.js');
+
 const validation = require('../helpers/validation.js');
 
 const app = express();
@@ -67,6 +69,8 @@ app.post('/update/:name', updateController.postUpdate);
 app.get('/chooseUpdate', chooseUpdateController.getChoose);
 
 app.post('/chooseUpdate', chooseUpdateController.postChoose);
+
+app.get('/logout', logoutController.getLogOut);
 
 
 // exports the object `app` (defined above)

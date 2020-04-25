@@ -18,6 +18,20 @@ const buildController = {
         db.findOne(Car, query, projection, function(result) {
 
             if(result != null) {
+
+                if(req.session.uName) {
+
+                    result.flag = true;
+                    result.uName = req.session.uName;
+
+                }
+
+                else{
+
+                    result.flag = false;
+
+                }
+
                 res.render('build', result);
             }
 
