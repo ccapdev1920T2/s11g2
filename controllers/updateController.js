@@ -2,6 +2,8 @@
 // import module `database` from `../models/db.js`
 const db = require('../models/db.js');
 
+const { validationResult } = require('express-validator');
+
 const Car = require('../models/CarModel.js');
 
 const updateController = {
@@ -69,30 +71,52 @@ const updateController = {
 
     postUpdate: function (req,res) {
 
-        var filter = {
-            name: req.body.name
-        };
+        var errors = validationResult(req);
 
-        var update = {
-            brand: req.body.brand,
-            carClass: req.body.class,
-            bodyStyle: req.body.bodyStyle,
-            capacity: req.body.capacity,
-            price: req.body.price,
-            description: req.body.desc,
-            imgLink: req.body.img,
-            optionImg: req.body.optionImg
-        }
+        if(!errors.isEmpty()) {
 
-        db.updateOne(Car, filter, update, function(flag) {
+            errors = errors.errors;
 
-            if(flag) {
+            var details = {};
 
-                res.redirect('/user/' + req.session.uName);
+            for(i = 0; i < errors.length; i++) {
+
+                details[errors[i].param + 'Error'] = errors[i].msg;
 
             }
-        });
+
+            res.render('update', details);
+
+        }
+        else{
+
+            var filter = {
+                name: req.body.name
+            };
+
+            var update = {
+                brand: req.body.brand,
+                carClass: req.body.class,
+                bodyStyle: req.body.bodyStyle,
+                capacity: req.body.capacity,
+                price: req.body.price,
+                description: req.body.description,
+                imgLink: req.body.imgLink,
+                optionImg: req.body.optionImg
+            }
+
+            db.updateOne(Car, filter, update, function(flag) {
+
+                if(flag) {
+
+                    res.redirect('/user/' + req.session.uName);
+
+                }
+            });
+        }
     }
+
+
 }
 
 module.exports = updateController;
