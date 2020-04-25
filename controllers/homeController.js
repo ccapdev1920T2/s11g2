@@ -16,12 +16,7 @@ const homeController = {
 
         if(req.session.uName) {
 
-            var details = {
-
-                flag: true,
-                uName: req.session.uName
-
-            }
+            res.redirect('/user/' + req.session.uName);
         }
 
         else {
@@ -31,9 +26,9 @@ const homeController = {
                 flag: false
 
             }
+
+            res.render('home', details);
         }
-        
-        res.render('home', details);
         
     },
 

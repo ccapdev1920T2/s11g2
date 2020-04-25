@@ -27,7 +27,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 app.use(session({
-    'secret': 'ccapdev-session',
+    'secret': 's11g2',
     'resave': false,
     'saveUninitialized': false,
     store: new MongoStore({mongooseConnection: mongoose.connection})

@@ -46,6 +46,8 @@ app.get('/home', homeController.getHome);
 
 app.post('/', homeController.postLogin);
 
+app.post('/home', homeController.postLogin);
+
 app.get('/register', registerController.getRegister);
 
 app.post('/register', validation.registerValidation(),  registerController.postRegister);
