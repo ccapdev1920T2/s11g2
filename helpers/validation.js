@@ -31,7 +31,7 @@ const validation = {
         ];
 
         return validation;
-    }
+    },
 
     addCarValidation: function(){
         var validation = [
@@ -55,7 +55,7 @@ const validation = {
         ];
 
         return validation;
-    }
+    },
 
     updateCarValidation: function(){
         var validation = [
