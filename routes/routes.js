@@ -28,9 +28,6 @@ const validation = require('../helpers/validation.js');
 
 const app = express();
 
-app.get('/addcar', addcarController.getAddCar);
-
-app.post('/addcar', addcarController.postAddCar);
 
 app.get('/search', searchController.getCars);
 
@@ -50,7 +47,11 @@ app.post('/home', homeController.postLogin);
 
 app.get('/register', registerController.getRegister);
 
-app.post('/register', validation.registerValidation(),  registerController.postRegister);
+app.post('/register', validation.registerValidation(), registerController.postRegister);
+
+app.get('/addcar', addcarController.getAddCar);
+
+app.post('/addcar', validation.addCarValidation(), addcarController.postAddCar);
 
 app.get('/getCheckUsername', registerController.getCheckUsername);
 
