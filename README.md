@@ -61,6 +61,11 @@ CCAPDEV S11 - Group 2: Virtus et Scientia
 - Jatico II, Nilo Cantil K. (Gridmerc)
 - Valera, Luis Angelo D.C. (luigi-ravioli)
 
+## Heroku
+
+Here is the link of the Heroku deployment. Notes on Heroku is listed in the Phase 3 notes.
+https://ccapdev-s11g2-deploy.herokuapp.com/
+
 ## Notes
 
 ### Phase 2
@@ -73,3 +78,4 @@ CCAPDEV S11 - Group 2: Virtus et Scientia
 
 ### Phase 3
 
+1. 
