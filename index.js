@@ -20,9 +20,6 @@ const port = process.env.PORT || 3000; //process.env.PORT is necessary for Herok
 /* Heroku stuff */
 require('dotenv').config();
 
-/* Add data */
-const data = require('./add_data.js');
-
 /* View Engine */
 app.set('view engine', 'hbs');
 
