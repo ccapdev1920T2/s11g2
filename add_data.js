@@ -133,6 +133,174 @@ var car = {
 
 db.insertOne(Car, car, function(flag){});
 
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/c/c5/Cavalcade-GTAV-front.png/revision/latest?cb=20161111195103",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/0/08/Cavalcade2-GTAV-front.png/revision/latest?cb=20160304225018",
+    name: "Cavalcade",
+    brand: "Albany",
+    carClass: "SUV",
+    bodyStyle: "4-Door SUV",
+    capacity: 4,
+    price: 60000,
+    description: "Despite the sheer size of the Cavalcade, it accelerates quick enough to worry high-displacement saloons. The Cavalcade's top speed is rather high. The Cavalcade's brakes are strong, but seem to lack feel. The suspension is moderately firm, and will keep the Cavalcade surprisingly well balanced through the bends, though some oversteer can be felt on longer turns, an odd handling characteristic for a 4WD SUV to have. On rough roads or when clipping curbs, the Cavalcade is fairly unstable and at high speeds in these conditions is susceptible to tipping over. Crash deformation is minimal; the Cavalcade holds its shape after multiple accidents."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/5/51/Granger-GTAO-RGSC2.jpg/revision/latest?cb=20200403032205",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/d/de/Granger-GTAV-front.png/revision/latest?cb=20160626144333",
+    name: "Granger",
+    brand: "Vapid",
+    carClass: "SUV",
+    bodyStyle: "4-Door SUV",
+    capacity: 4,
+    price: 35000,
+    description: "The Granger features North American styling, similar to the tenth generation (2007-2014) Chevrolet Suburban (GMT900) in terms of the front-end, side and rear profile, with subtle design cues of the refreshed model, applied to the front end. Its headlights resemble the 2007-2013 GMC Sierra."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/9/97/Mesa-GTAV-front.png/revision/latest?cb=20160626145559",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/f/fd/Mesa3-GTAV-front.png/revision/latest?cb=20160929163600",
+    name: "Mesa",
+    brand: "Canis",
+    carClass: "SUV",
+    bodyStyle: "4-Door SUV",
+    capacity: 4,
+    price: 20000,
+    description: "The Mesa has an average top speed and good acceleration due to its light weight. However, it has a wide turning radius and needs to be driven moderately. The vehicle performs well off-road due to its full 4WD drivetrain and light weight, and it has excellent torque which allows it to climb very steep hills. Durability is excellent, as the vehicle is able to take considerable abuse from gunfire and collisions before the engine fails. The Mesa is also capable of an impressive amount of momentum once it gathers speed, rivalling larger cars like the Emperor in its ability to force its way through obstacles and roadblocks."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/3/3d/Bullet-GTAV-front.png/revision/latest?cb=20180331183434",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/a/ac/VapidBullet-GTAO-SocialClub3.jpg/revision/latest?cb=20191229074551",
+    name: "Bullet",
+    brand: "Vapid",
+    carClass: "Sports",
+    bodyStyle: "2-Door Sports Coupe",
+    capacity: 2,
+    price: 84000,
+    description: "The Bullet's design closely resembles a Ford GT. However, the Ford GT was not introduced until 2002, ten years after the game takes place, but the original GT40 model was manufactured from 1964 to 1969. The Ford GT40 was used as a racecar in the 1960s, but bears less resemblance to the Bullet."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/7/7b/CarbonizzareDown-GTAV-front.png/revision/latest?cb=20160917231442",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/8/80/Carbonizzare-GTAV-RGSC3.jpg/revision/latest?cb=20200103095703",
+    name: "Carbonizzare",
+    brand: "Grotti",
+    carClass: "Sports",
+    bodyStyle: "2-Door Grand Tourer",
+    capacity: 2,
+    price: 195000,
+    description: "The car's design draws clear inspiration from British-Italian styling found on the Aston Martin V12 Zagato and Ferrari F12 for the rear fascia, front and rear quarter paneling, along with the almost identical wheel design as the Aston. The headlights, front bumper ducts and integrated LED daytime running lights appear near identical to those of the TranStar Racing Dagger GT. The car's convertible feature is based on that of the Ferrari California, while the Aston Martin V12 Zagato does not feature any folding roof mechanism."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/d/d2/Comet-GTAV-front.png/revision/latest?cb=20160702195302",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/0/05/Modified-Comet-LSC-GTA-V.jpg/revision/latest?cb=20150102181347",
+    name: "Comet",
+    brand: "Pfister",
+    carClass: "Sports",
+    bodyStyle: "2-Door Sports Car",
+    capacity: 2,
+    price: 28000,
+    description: "Manufactured by Pfister, the Comet is available only in hardtop coupé form. It now largely resembles a Porsche 996 Carrera 4S and the Porsche Carrera GT for the front grille/mouth and headlights. The Comet features large, cross-drilled disc brakes all around. Inside are two sport seats in black leather resembling Lamborghini's seat design. Similar to the Turismo, the Comet also features a front-mounted, carpeted boot with space for luggage."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/6/68/Packer-GTAV-front.png/revision/latest?cb=20160308175915",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/8/81/Packer-GTAIV-front.png/revision/latest?cb=20170223191434",
+    name: "Packer",
+    brand: "MTL",
+    carClass: "Truck",
+    bodyStyle: "Industrial Truck",
+    capacity: 2,
+    price: 45000,
+    description: "The majority of the design is based around two existing vehicles; the Brute Stockade and the JoBuilt Phantom. A large portion of the front area of the vehicle, particularly the hood, lights and fenders are identical to the Stockade. The hood and grille lacks any badging and the grille itself has comparatively less vertical elements than the Stockade, but the general shape remains the same. The truck also sports a new commercial bumper, and sees the removal of the hood mirrors, hood catches and the arch cladding present on the Stockade."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/c/c6/Contender-GTAO-front.png/revision/latest?cb=20160712124055",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/1/1f/Contender-GTAIV-front.png/revision/latest?cb=20160829215234",
+    name: "Contender",
+    brand: "Vapid",
+    carClass: "Truck",
+    bodyStyle: "Pickup Truck",
+    capacity: 4,
+    price: 25000,
+    description: "The truck has reasonable performance thanks to a powerful V8 engine powering all four wheels, giving it immediate acceleration and little loss of traction in a straight line, as well as great off-roading capabilities. However, it has a large oversteer when approaching corners too fast, resulting in a spin-out at high speeds. Along with being a heavy and durable vehicle, this vehicle has bullet resistant windows, strong axle, and sturdy frame."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/c/c6/Contender-GTAO-front.png/revision/latest?cb=20160712124055",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/1/1f/Contender-GTAIV-front.png/revision/latest?cb=20160829215234",
+    name: "Mule",
+    brand: "Maibatsu",
+    carClass: "Truck",
+    bodyStyle: "2-Door Box Truck",
+    capacity: 2,
+    price: 20000,
+    description: "The truck has reasonable performance thanks to a powerful V8 engine powering all four wheels, giving it immediate acceleration and little loss of traction in a straight line, as well as great off-roading capabilities. However, it has a large oversteer when approaching corners too fast, resulting in a spin-out at high speeds. Along with being a heavy and durable vehicle, this vehicle has bullet resistant windows, strong axle, and sturdy frame."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/5/58/Asea-GTAV-front.png/revision/latest?cb=20160406180243",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/d/d5/Asea-GTAV-Stickerbomb-Front.png/revision/latest?cb=20141022195847",
+    name: "Asea",
+    brand: "DeClasse",
+    carClass: "Sedan",
+    bodyStyle: "4-Door Compact Sedan",
+    capacity: 4,
+    price: 12000,
+    description: "An affordable, no frills, fuel-efficient compact sedan. When 'ample headroom' is central to the marketing campaign, what you see is what you get."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/7/7c/Intruder-GTAV-front.png/revision/latest?cb=20160305191559",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/5/5f/Intruder-GTAV-Other.png/revision/latest?cb=20180413095627",
+    name: "Intruder",
+    brand: "Karin",
+    carClass: "Sedan",
+    bodyStyle: "4-Door Sedan",
+    capacity: 4,
+    price: 16000,
+    description: "The Japanese-made Intruder was launched by Karin to compete in the same market as German high-performance luxury cars (i.e. by copying them exactly using substandard parts and selling for half the price)."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/5/57/Schafter-GTAV-front.png/revision/latest?cb=20160409181945",
+    optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/6/6d/Schafter-GTAIV-front.png/revision/latest?cb=20170122142823",
+    name: "Schafter",
+    brand: "Benefactor",
+    carClass: "Sedan",
+    bodyStyle: "4-Door Sedan",
+    capacity: 4,
+    price: 65000,
+    description: "Good-looking yet utilitarian, sexy yet asexual, slender yet terrifyingly powerful, the Schafter is German engineering at its very finest."
+}
+
+db.insertOne(Car, car, function(flag){});
+
 /* Implementing the hashing function to the password of the admin */
 var pw = 'admin'; //Manually placing the value of the password
 bcrypt.hash(pw, saltRounds, function(err, hash) {
