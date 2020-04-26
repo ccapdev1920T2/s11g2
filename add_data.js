@@ -155,3 +155,69 @@ bcrypt.hash(pw, saltRounds, function(err, hash) {
     
     db.insertOne(User, admin, function(flag){});
 });
+
+var pw = 'password'; //Manually placing the value of the password
+bcrypt.hash(pw, saltRounds, function(err, hash) {
+    var admin = { 
+        fName: "Ned",
+        lName: "Stark",
+        uName: "nedstark",
+        pw: hash,
+        email: "nedstark@got.com",
+        bDay: '2001-07-08',     //...new Date(2001, 7, 8),
+        //credit card
+        ccNo: 0,
+        ccExp: '2069-07-08',    //...new Date(2069, 7, 8)
+        ccPin: 6969,
+        //license
+        fileId: "1234",
+        startDate: '2069-07-08',//...new Date(2069, 7, 8),
+        expDate: '2420-07-08'   //...new Date(2420, 7, 8)
+    }
+    
+    db.insertOne(User, admin, function(flag){});
+});
+
+var pw = 'password'; //Manually placing the value of the password
+bcrypt.hash(pw, saltRounds, function(err, hash) {
+    var admin = { 
+        fName: "John",
+        lName: "Doe",
+        uName: "johndoe",
+        pw: hash,
+        email: "johndoe@mgs.com",
+        bDay: '2001-07-08',     //...new Date(2001, 7, 8),
+        //credit card
+        ccNo: 0,
+        ccExp: '2069-07-08',    //...new Date(2069, 7, 8)
+        ccPin: 6969,
+        //license
+        fileId: "1234",
+        startDate: '2069-07-08',//...new Date(2069, 7, 8),
+        expDate: '2420-07-08'   //...new Date(2420, 7, 8)
+    }
+    
+    db.insertOne(User, admin, function(flag){});
+});
+
+var pw = 'password'; //Manually placing the value of the password
+bcrypt.hash(pw, saltRounds, function(err, hash) {
+    var admin = { 
+        fName: "Jane",
+        lName: "Doe",
+        uName: "janedoe",
+        pw: hash,
+        email: "janedoe@mgs.com",
+        bDay: '2001-07-08',     //...new Date(2001, 7, 8),
+        //credit card
+        ccNo: 0,
+        ccExp: '2069-07-08',    //...new Date(2069, 7, 8)
+        ccPin: 6969,
+        //license
+        fileId: "1234",
+        startDate: '2069-07-08',//...new Date(2069, 7, 8),
+        expDate: '2420-07-08'   //...new Date(2420, 7, 8)
+    }
+    
+    db.insertOne(User, admin, function(flag){});
+});
