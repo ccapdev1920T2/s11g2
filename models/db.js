@@ -7,8 +7,7 @@ const User = require('./UserModel.js');
 const Car = require('./CarModel.js');
 
 // ccapdev-mongoose is the name of the database
-const MONGODB_URI = 'mongodb+srv://admin:admin@s11g2-welhv.mongodb.net/test?retryWrites=true&w=majority'
-const url = MONGODB_URI || 'mongodb://localhost:27017/s11g2';
+const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/s11g2';
 
 // additional connection options
 const options = {
