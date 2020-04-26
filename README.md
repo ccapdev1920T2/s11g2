@@ -78,4 +78,6 @@ https://ccapdev-s11g2-deploy.herokuapp.com/
 
 ### Phase 3
 
-1. 
+1. Based on the specifications, the limitations of this application is there is no price slider and there is no file upload for the admin to add pictures of cars locally.
+2. Running the application locally works. The user may log-in and log-out. The admin can add, update and delete a car and be redirected to configure data easily.
+3. The application has been deployed in Heroku. However, the use of cloud database was troublesome, and leads to multiple errors. As a result, only three pages are accessible in Heroku link.
