@@ -15,7 +15,7 @@ const routes = require('./routes/routes.js');
 
 /* Port */
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; //process.env.PORT is necessary for Heroku to deploy the application.
 
 /* View Engine */
 app.set('view engine', 'hbs');
