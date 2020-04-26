@@ -31,7 +31,7 @@ git clone https://github.com/ccapdev1920T2/s11g2
 2. Open Command Prompt, and navigate to the project folder where you downloaded.
 3. Run the command `npm install` to initialize and install all necessary modules used in the project.
 4. Run the command `node add_data.js` to add the initial data to the database.
-5. For apparent reason, the command prompt will mention that the cars are added but the admin is not added. However, that is not the case since it's added to the database. To proceed to the next step, press on your keyboard, "ctrl + c", to stop the run.
+5. All the data necessary is added to the database. In order to proceed further, you must press on your keyboard, "ctrl + c".
 6. We can now run the server. Run the command `node index.js`. Upon running the command, your Command Prompt should display the following statement:
 ```
 App listening at port 3000
@@ -63,8 +63,13 @@ CCAPDEV S11 - Group 2: Virtus et Scientia
 
 ## Notes
 
+### Phase 2
+
 1. UI Price Slider is not implemented (from the comments of Phase 1) in Phase 2. As a result, there are three options in the search page where the user can sort the cars by their name, brand or price.
 2. It's really important to note to ctrl + c once Command Prompt does not want to stop the add_data.js.
 3. The implementation of adding users is not yet implemented as some of the concepts needed are not yet discussed or approached. However, to add, delete and update the information of cars are implemented.
 4. As a result, registering and logging in is not yet possible until more concepts such as "express-session" is fully discussed.
 5. The updated Pre-Phase 2 UML document is in the repository.
+
+### Phase 3
+
