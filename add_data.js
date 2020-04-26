@@ -260,6 +260,20 @@ var car = {
 db.insertOne(Car, car, function(flag){});
 
 var car = {
+    imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/b/b4/Vacca-GTAV-front.png/revision/latest/scale-to-width-down/1000?cb=20180331183726",
+    optionImg: "https://gta.fandom.com/wiki/Vacca?file=Vacca-GTAV-FrontQuarter.png",
+    name: "Vacca",
+    brand: "Pegassi",
+    carClass: "Sports",
+    bodyStyle: "2-Door Sports car",
+    capacity: 2,
+    price: 50000,
+    description: "The car is capable of high top speeds, owing to its high horse-power. Bearing a powerful engine, the Vacca is very easy to throw around on roads at high speeds. It can curve around bends with ease and weave in and out of traffic without much effort or body roll, though some oversteer is noticeable. Shifts are rather quick but sometimes it takes a while for the Vacca to gain traction after powerful take off, resulting in the transmission hesitating to upshift."
+}
+
+db.insertOne(Car, car, function(flag){});
+
+var car = {
     imgLink: "https://vignette.wikia.nocookie.net/gtawiki/images/5/58/Asea-GTAV-front.png/revision/latest?cb=20160406180243",
     optionImg: "https://vignette.wikia.nocookie.net/gtawiki/images/d/d5/Asea-GTAV-Stickerbomb-Front.png/revision/latest?cb=20141022195847",
     name: "Asea",
