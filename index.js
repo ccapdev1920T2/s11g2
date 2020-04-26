@@ -17,6 +17,9 @@ const routes = require('./routes/routes.js');
 const app = express();
 const port = process.env.PORT || 3000; //process.env.PORT is necessary for Heroku to deploy the application.
 
+/* Heroku stuff */
+require('dotenv').config();
+
 /* Add data */
 const data = require('./add_data.js');
 
